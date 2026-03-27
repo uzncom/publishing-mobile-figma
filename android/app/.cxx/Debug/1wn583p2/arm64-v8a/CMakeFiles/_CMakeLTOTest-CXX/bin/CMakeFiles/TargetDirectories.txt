@@ -1,0 +1,4 @@
+/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,26 @@
+# ninja log v5
+2	65	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+9	10814	1773879070863289080	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/States.cpp.o	fa745d4c9c7fc38f
+5	12581	1773879072627317058	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp.o	1976c2ba70e32e0f
+13	14266	1773879074269236493	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/safeareacontext-generated.cpp.o	868f1a1e517bef
+1	16580	1773879076619027859	CMakeFiles/appmodules.dir/OnLoad.cpp.o	43873e97004a59b5
+4	16641	1773879076639165918	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewState.cpp.o	5350ace31df5a11e
+6	17337	1773879077377341537	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ShadowNodes.cpp.o	ceccad2b436a09a8
+6	18380	1773879078390117472	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.cpp.o	46c00061624c8d13
+2	19611	1773879079644831212	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.cpp.o	36de24d0947a6814
+4	19751	1773879079775439206	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ComponentDescriptors.cpp.o	888bfc98f5d2aa2b
+19751	20205	1773879080243446902	/Users/work/figma/reactNativeTest/android/app/build/intermediates/cxx/Debug/1wn583p2/obj/armeabi-v7a/libreact_codegen_safeareacontext.so	9780860e91db2d92
+1	21760	1773879081768142635	CMakeFiles/appmodules.dir/Users/work/figma/reactNativeTest/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	e5742b3330622165
+21760	21946	1773879081998756707	/Users/work/figma/reactNativeTest/android/app/build/intermediates/cxx/Debug/1wn583p2/obj/armeabi-v7a/libappmodules.so	26eac0424e17c7b2
+1	49	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	60	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	82	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+2	84	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+0	47	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	50	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	45	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	66	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	63	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	44	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	75	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547
+1	69	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/armeabi-v7a/CMakeFiles/cmake.verify_globs	44c6e2cdb62e4547

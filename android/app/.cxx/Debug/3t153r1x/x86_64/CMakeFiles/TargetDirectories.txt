@@ -1,0 +1,6 @@
+/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86_64/CMakeFiles/appmodules.dir
+/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86_64/CMakeFiles/edit_cache.dir
+/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86_64/safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir
+/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86_64/safeareacontext_autolinked_build/CMakeFiles/edit_cache.dir
+/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86_64/safeareacontext_autolinked_build/CMakeFiles/rebuild_cache.dir

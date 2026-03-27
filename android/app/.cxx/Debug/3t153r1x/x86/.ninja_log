@@ -1,0 +1,17 @@
+# ninja log v5
+26	14298	1774583830212948750	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp.o	e6f2d46f391c34bc
+33	12307	1774583828215224843	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/States.cpp.o	4a2ced519b6c3bb2
+35	16610	1774583832486860124	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/safeareacontext-generated.cpp.o	f9d1846607311e86
+23902	24102	1774583840039360957	/Users/work/github/publishing-mobile-figma/android/app/build/intermediates/cxx/Debug/3t153r1x/obj/x86/libappmodules.so	aed1f9b32a72463a
+28	20915	1774583836819919574	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.cpp.o	481c3306563533bf
+23	19316	1774583835233359053	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewState.cpp.o	f56cd48285a4a628
+19	19118	1774583835015409038	CMakeFiles/appmodules.dir/OnLoad.cpp.o	44643e54e23494e2
+22473	22972	1774583838895423059	/Users/work/github/publishing-mobile-figma/android/app/build/intermediates/cxx/Debug/3t153r1x/obj/x86/libreact_codegen_safeareacontext.so	9b864e6f6f9f6abe
+1	69	0	/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86/CMakeFiles/cmake.verify_globs	13401d12c72f85a1
+31	20076	1774583835995523564	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ShadowNodes.cpp.o	498fabbbd3580665
+25	22400	1774583838295884348	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ComponentDescriptors.cpp.o	b5817f4a8bb4bebd
+17	23901	1774583839798637447	CMakeFiles/appmodules.dir/Users/work/github/publishing-mobile-figma/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	70640593bfe587ed
+21	22473	1774583838388382013	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/github/publishing-mobile-figma/node_modules/react-native-safe-area-context/common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.cpp.o	2c9d289b64c67e4
+131	1161	1774584308233542141	build.ninja	2f98a3110d4a2101
+0	30	0	clean	de3d173c1b64827
+1	79	0	/Users/work/github/publishing-mobile-figma/android/app/.cxx/Debug/3t153r1x/x86/CMakeFiles/cmake.verify_globs	13401d12c72f85a1

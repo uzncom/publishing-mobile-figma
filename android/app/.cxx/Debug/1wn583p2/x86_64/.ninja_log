@@ -1,0 +1,26 @@
+# ninja log v5
+1	59	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	54	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+14	9473	1773879142282740374	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/States.cpp.o	22b1a1e9892d9673
+7	11287	1773879144035620539	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp.o	e70a3ca2e618d20e
+16	12474	1773879145285410402	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/safeareacontext-generated.cpp.o	3e67e80a55917554
+1	14123	1773879146935187288	CMakeFiles/appmodules.dir/OnLoad.cpp.o	619917a80b8bf016
+9	14400	1773879147193857731	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewState.cpp.o	76a240fa7407dbb5
+10	14687	1773879147507111320	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ShadowNodes.cpp.o	e4a5b2d044181325
+12	15091	1773879147901418428	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.cpp.o	72c9526aa7c3dc4e
+3	15950	1773879148756766549	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ComponentDescriptors.cpp.o	da93f5fe0f80adb8
+5	15958	1773879148776591462	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/work/figma/reactNativeTest/node_modules/react-native-safe-area-context/common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.cpp.o	70ab27bc7564234e
+15959	16312	1773879149131202142	/Users/work/figma/reactNativeTest/android/app/build/intermediates/cxx/Debug/1wn583p2/obj/x86_64/libreact_codegen_safeareacontext.so	75588d5389885a67
+1	16994	1773879149792833689	CMakeFiles/appmodules.dir/Users/work/figma/reactNativeTest/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	d7e22b105bb22de9
+16994	17155	1773879149985795644	/Users/work/figma/reactNativeTest/android/app/build/intermediates/cxx/Debug/1wn583p2/obj/x86_64/libappmodules.so	eb85e8062a0cc3f9
+2	65	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	76	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+2	74	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	49	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	45	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+2	70	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	60	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	67	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	49	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	58	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d
+1	69	0	/Users/work/figma/reactNativeTest/android/app/.cxx/Debug/1wn583p2/x86_64/CMakeFiles/cmake.verify_globs	8050c69afc5a411d

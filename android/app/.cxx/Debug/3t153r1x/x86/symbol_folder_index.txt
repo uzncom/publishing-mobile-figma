@@ -1,0 +1,1 @@
+/Users/work/github/publishing-mobile-figma/android/app/build/intermediates/cxx/Debug/3t153r1x/obj/x86
