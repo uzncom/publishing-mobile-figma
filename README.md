@@ -5,6 +5,7 @@
 ## Android 
 ### Android Studio 설치(https://developer.android.com/studio?hl=ko)
 - More Actions > Virtual Device Manager > 가상 디바이스 추가
+- npx react-native run-android 실행
 
 ### Metro 연결 확인 필요
 - 연결 안될 시 빈 화면, 실행되더라도 끊기면 화면 안나옴
