@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
-import { tokens } from "designcenter-figma/dist/js/native-tokens";
+import { tokens } from "designcenter-figma"; // designcenter-figma의 main이 dist/js/native-tokens.js라서 패키지 루트만 써도 동일
 
 const styles = StyleSheet.create({
   app: {
     flex: 1,
-    backgroundColor: tokens.color.background.default,
+    backgroundColor: tokens.semantic.bg.accentBlueDefault,
     justifyContent: "center",
     alignItems: "center",
     padding: 24,
@@ -12,48 +12,49 @@ const styles = StyleSheet.create({
 
   card: {
     width: 320,
-    backgroundColor: tokens.color.background.surface,
+    backgroundColor: tokens.semantic.bg.inverse,
     borderRadius: tokens.radius[200],
     padding: 24,
   },
 
   title: {
-    fontSize: tokens.typography.heading.fontSize,
-    fontWeight: tokens.typography.heading.fontWeight,
-    color: tokens.color.text.primary,
+    fontSize: tokens.typo.title.mediumStrong.fontSize,
+    fontWeight: tokens.typo.title.mediumStrong.fontWeight,
+    color: tokens.semantic.text.strong,
     marginBottom: 16,
   },
 
   description: {
-    fontSize: tokens.typography.body.fontSize,
-    color: tokens.color.text.secondary,
+    fontSize: tokens.typo.body.smallDefault.fontSize,
+    fontWeight: tokens.typo.body.smallDefault.fontWeight,
+    color: tokens.semantic.text.subtle,
     marginBottom: 24,
   },
 
   primaryButton: {
-    backgroundColor: tokens.color.brand.primary,
+    backgroundColor: tokens.semantic.bg.brandDefault,
     padding: 16,
     borderRadius: tokens.radius[200],
     marginBottom: 8,
   },
 
   primaryButtonText: {
-    color: tokens.color.text.onPrimary,
+    color: tokens.semantic.text.inverse,
     textAlign: "center",
-    fontWeight: tokens.typography.fontWeight.medium,
+    fontWeight: tokens.fontWeight.medium,
   },
 
   secondaryButton: {
-    backgroundColor: tokens.color.background.surface,
+    backgroundColor: tokens.semantic.bg.inverse,
     padding: 16,
     borderRadius: tokens.radius[200],
     borderWidth: 1,
-    borderColor: tokens.color.border.default,
+    borderColor: tokens.semantic.border.neutralDefault,
     marginBottom: 16,
   },
 
   secondaryButtonText: {
-    color: tokens.color.brand.primary,
+    color: tokens.semantic.text.brandDefault,
     textAlign: "center",
   },
 
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
   },
 
   boxText: {
-    color: "#fff",
+    color: tokens.semantic.text.inverse,
     textAlign: "center",
   },
 });
