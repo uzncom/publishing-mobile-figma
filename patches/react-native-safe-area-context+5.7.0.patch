@@ -1,0 +1,58 @@
+diff --git a/node_modules/react-native-safe-area-context/android/build.gradle b/node_modules/react-native-safe-area-context/android/build.gradle
+index f324b9a..5410002 100644
+--- a/node_modules/react-native-safe-area-context/android/build.gradle
++++ b/node_modules/react-native-safe-area-context/android/build.gradle
+@@ -41,9 +41,9 @@ if (isNewArchitectureEnabled()) {
+ android {
+     def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION
+     if (agpVersion.tokenize('.')[0].toInteger() >= 7) {
+-        namespace "com.th3rdwave.safeareacontext"
++        namespace = "com.th3rdwave.safeareacontext"
+         buildFeatures {
+-            buildConfig true
++            buildConfig = true
+         }
+     }
+ 
+@@ -52,10 +52,10 @@ android {
+     // Used to override the NDK path/version on internal CI or by allowing
+     // users to customize the NDK path/version from their root project (e.g. for M1 support)
+     if (rootProject.hasProperty("ndkPath")) {
+-        ndkPath rootProject.ext.ndkPath
++        ndkPath = rootProject.ext.ndkPath
+     }
+     if (rootProject.hasProperty("ndkVersion")) {
+-        ndkVersion rootProject.ext.ndkVersion
++        ndkVersion = rootProject.ext.ndkVersion
+     }
+ 
+     defaultConfig {
+@@ -71,7 +71,7 @@ android {
+     }
+ 
+     lintOptions{
+-        abortOnError false
++        abortOnError = false
+     }
+ 
+     packagingOptions {
+@@ -111,7 +111,7 @@ repositories {
+     google()
+     maven {
+         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+-        url "$rootDir/../node_modules/react-native/android"
++        url = "$rootDir/../node_modules/react-native/android"
+     }
+     mavenCentral()
+ }
+diff --git a/node_modules/react-native-safe-area-context/android/src/main/AndroidManifest.xml b/node_modules/react-native-safe-area-context/android/src/main/AndroidManifest.xml
+index f5da598..4b624d1 100644
+--- a/node_modules/react-native-safe-area-context/android/src/main/AndroidManifest.xml
++++ b/node_modules/react-native-safe-area-context/android/src/main/AndroidManifest.xml
+@@ -1,5 +1,4 @@
+ 
+ <manifest
+-	xmlns:android="http://schemas.android.com/apk/res/android"
+-  package="com.th3rdwave.safeareacontext">
++	xmlns:android="http://schemas.android.com/apk/res/android">
+ </manifest>

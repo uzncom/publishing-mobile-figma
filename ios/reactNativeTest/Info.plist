@@ -37,6 +37,18 @@
 	<string></string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PretendardGOV-Black.ttf</string>
+		<string>PretendardGOV-Bold.ttf</string>
+		<string>PretendardGOV-ExtraBold.ttf</string>
+		<string>PretendardGOV-ExtraLight.ttf</string>
+		<string>PretendardGOV-Light.ttf</string>
+		<string>PretendardGOV-Medium.ttf</string>
+		<string>PretendardGOV-Regular.ttf</string>
+		<string>PretendardGOV-SemiBold.ttf</string>
+		<string>PretendardGOV-Thin.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

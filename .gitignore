@@ -13,10 +13,12 @@ yarn-error.log*
 # Android
 android/build/
 android/app/build/
+android/app/.cxx/
 .gradle/
 
 # iOS
 ios/build/
+ios/ios/build/
 ios/Pods/
 
 # Metro

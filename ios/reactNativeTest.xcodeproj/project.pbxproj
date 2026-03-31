@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-reactNativeTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-reactNativeTest.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		506E2F343A98861EAB267954 /* PretendardGOV-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AECBAB1167294A7E297C118A /* PretendardGOV-Light.ttf */; };
+		6DBD6BC4F939C146A87F4995 /* PretendardGOV-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34A9C9217412E1546DBB9A8B /* PretendardGOV-Regular.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		91CEBE38C885EC862D9D391C /* PretendardGOV-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3863852FAB03F9372D4BE459 /* PretendardGOV-Black.ttf */; };
+		95FCF2B5C0777E7DF9A87C0B /* PretendardGOV-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB18409B4CA4CBAA657675D8 /* PretendardGOV-Thin.ttf */; };
 		96A2CF38D09CC53823FC7A95 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		9F62463649D6FFA23F022045 /* PretendardGOV-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 906211819B62F87A4BA54208 /* PretendardGOV-SemiBold.ttf */; };
+		A18CFE5112AE4CB7F71D0540 /* PretendardGOV-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8317E3027E676DC32A90FDB2 /* PretendardGOV-Medium.ttf */; };
+		C860342D803A7BA2503D8CB5 /* PretendardGOV-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029A88B3C2C23B50AB043E45 /* PretendardGOV-Bold.ttf */; };
+		F517A60EAFD225B5505205EB /* PretendardGOV-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22ECBE442776118A17F195DE /* PretendardGOV-ExtraLight.ttf */; };
+		FE1C47E4CD8241836CFCECE1 /* PretendardGOV-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AD28E47D511B80C2CC3F434 /* PretendardGOV-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		029A88B3C2C23B50AB043E45 /* PretendardGOV-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-Bold.ttf"; path = "../src/assets/fonts/PretendardGOV-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* reactNativeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reactNativeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reactNativeTest/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reactNativeTest/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = reactNativeTest/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		22ECBE442776118A17F195DE /* PretendardGOV-ExtraLight.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-ExtraLight.ttf"; path = "../src/assets/fonts/PretendardGOV-ExtraLight.ttf"; sourceTree = "<group>"; };
+		2AD28E47D511B80C2CC3F434 /* PretendardGOV-ExtraBold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-ExtraBold.ttf"; path = "../src/assets/fonts/PretendardGOV-ExtraBold.ttf"; sourceTree = "<group>"; };
+		34A9C9217412E1546DBB9A8B /* PretendardGOV-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-Regular.ttf"; path = "../src/assets/fonts/PretendardGOV-Regular.ttf"; sourceTree = "<group>"; };
+		3863852FAB03F9372D4BE459 /* PretendardGOV-Black.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-Black.ttf"; path = "../src/assets/fonts/PretendardGOV-Black.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-reactNativeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTest.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTest/Pods-reactNativeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-reactNativeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTest.release.xcconfig"; path = "Target Support Files/Pods-reactNativeTest/Pods-reactNativeTest.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-reactNativeTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = reactNativeTest/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reactNativeTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8317E3027E676DC32A90FDB2 /* PretendardGOV-Medium.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-Medium.ttf"; path = "../src/assets/fonts/PretendardGOV-Medium.ttf"; sourceTree = "<group>"; };
+		906211819B62F87A4BA54208 /* PretendardGOV-SemiBold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-SemiBold.ttf"; path = "../src/assets/fonts/PretendardGOV-SemiBold.ttf"; sourceTree = "<group>"; };
+		AECBAB1167294A7E297C118A /* PretendardGOV-Light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-Light.ttf"; path = "../src/assets/fonts/PretendardGOV-Light.ttf"; sourceTree = "<group>"; };
+		BB18409B4CA4CBAA657675D8 /* PretendardGOV-Thin.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "PretendardGOV-Thin.ttf"; path = "../src/assets/fonts/PretendardGOV-Thin.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -75,6 +93,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				B75842B2CB514D6905A3C61D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -87,6 +106,30 @@
 				13B07F961A680F5B00A75B9A /* reactNativeTest.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B450344D4A5740B77D0AE808 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3863852FAB03F9372D4BE459 /* PretendardGOV-Black.ttf */,
+				029A88B3C2C23B50AB043E45 /* PretendardGOV-Bold.ttf */,
+				2AD28E47D511B80C2CC3F434 /* PretendardGOV-ExtraBold.ttf */,
+				22ECBE442776118A17F195DE /* PretendardGOV-ExtraLight.ttf */,
+				AECBAB1167294A7E297C118A /* PretendardGOV-Light.ttf */,
+				8317E3027E676DC32A90FDB2 /* PretendardGOV-Medium.ttf */,
+				34A9C9217412E1546DBB9A8B /* PretendardGOV-Regular.ttf */,
+				906211819B62F87A4BA54208 /* PretendardGOV-SemiBold.ttf */,
+				BB18409B4CA4CBAA657675D8 /* PretendardGOV-Thin.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		B75842B2CB514D6905A3C61D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B450344D4A5740B77D0AE808 /* Fonts */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -161,6 +204,15 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				96A2CF38D09CC53823FC7A95 /* PrivacyInfo.xcprivacy in Resources */,
+				91CEBE38C885EC862D9D391C /* PretendardGOV-Black.ttf in Resources */,
+				C860342D803A7BA2503D8CB5 /* PretendardGOV-Bold.ttf in Resources */,
+				FE1C47E4CD8241836CFCECE1 /* PretendardGOV-ExtraBold.ttf in Resources */,
+				F517A60EAFD225B5505205EB /* PretendardGOV-ExtraLight.ttf in Resources */,
+				506E2F343A98861EAB267954 /* PretendardGOV-Light.ttf in Resources */,
+				A18CFE5112AE4CB7F71D0540 /* PretendardGOV-Medium.ttf in Resources */,
+				6DBD6BC4F939C146A87F4995 /* PretendardGOV-Regular.ttf in Resources */,
+				9F62463649D6FFA23F022045 /* PretendardGOV-SemiBold.ttf in Resources */,
+				95FCF2B5C0777E7DF9A87C0B /* PretendardGOV-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
