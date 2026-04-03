@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "bash ./scripts/run-ios.sh",
+    "pod-install": "cd ios && pod install",
     "lint": "eslint .",
     "postinstall": "patch-package",
     "start": "react-native start",
