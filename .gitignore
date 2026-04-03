@@ -27,3 +27,7 @@ ios/Pods/
 
 # misc
 .env
+
+# Xcode
+**/compile_commands.json
+ios/.xcode.env.local
