@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import styles from "../styles/styles";
+import styles from "../css/styles";
 import { getTokenFontItems, getTokenFontStyle } from "../utils/utils";
 
 const titleFontStyle = getTokenFontStyle(700);
