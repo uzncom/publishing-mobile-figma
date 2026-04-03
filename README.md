@@ -37,6 +37,18 @@
 - xcode workspace에서 기기 선택했어도 default 기기가 아니라서 선택한 기기로 실행 안될수 있음
 - npx react-native run-ios --simulator="iPhone 14 Pro" 시뮬레이터 기기 직접 입력 후 실행
 
+### npm run ios 실행
+- `npm run ios`는 `scripts/run-ios.sh`를 통해 공용 실행 방식으로 iOS 앱을 실행함
+- 이미 부팅된 시뮬레이터가 있으면 해당 기기로 실행됨
+- 특정 시뮬레이터를 지정하려면 파일을 수정하지 말고 아래처럼 인자를 넘겨서 실행
+
+```bash
+npm run ios -- --simulator="iPhone 16"
+npm run ios -- --simulator="iPhone SE (3rd generation)"
+npm run ios -- --udid="DEVICE-UDID"
+IOS_SIMULATOR="iPhone 17 Pro" npm run ios
+```
+
 ##환경설정
 1. $ vi ~/.zshrc
 

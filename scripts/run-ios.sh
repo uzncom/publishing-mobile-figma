@@ -5,25 +5,22 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-APP_PATH="ios/build/Build/Products/Debug-iphonesimulator/reactNativeTest.app"
 DEFAULT_SIMULATOR="${IOS_SIMULATOR:-iPhone 16 Pro}"
+RUN_IOS_ARGS=("$@")
+
+if [ "${#RUN_IOS_ARGS[@]}" -gt 0 ]; then
+  echo "Running iOS with custom arguments: ${RUN_IOS_ARGS[*]}"
+  exec npx react-native run-ios --scheme reactNativeTest "${RUN_IOS_ARGS[@]}"
+fi
 
 BOOTED_UDID="$(xcrun simctl list devices booted | awk -F '[()]' '/Booted/ {print $2; exit}')"
-if [ -z "${BOOTED_UDID}" ]; then
-  xcrun simctl boot "${DEFAULT_SIMULATOR}" >/dev/null 2>&1 || true
-  open -a Simulator
+
+if [ -n "${BOOTED_UDID}" ]; then
+  echo "Using booted simulator: ${BOOTED_UDID}"
+  exec npx react-native run-ios --scheme reactNativeTest --udid "${BOOTED_UDID}"
 fi
 
-npx react-native build-ios --scheme reactNativeTest --mode Debug --buildFolder ios/build
+open -a Simulator >/dev/null 2>&1 || true
 
-if [ ! -d "${APP_PATH}" ]; then
-  echo "Built app not found at ${APP_PATH}"
-  exit 1
-fi
-
-BUNDLE_ID="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "${APP_PATH}/Info.plist")"
-
-xcrun simctl install booted "${APP_PATH}"
-xcrun simctl launch booted "${BUNDLE_ID}"
-
-echo "Launched ${BUNDLE_ID} on booted simulator."
+echo "Booting and launching on simulator: ${DEFAULT_SIMULATOR}"
+exec npx react-native run-ios --scheme reactNativeTest --simulator "${DEFAULT_SIMULATOR}"
