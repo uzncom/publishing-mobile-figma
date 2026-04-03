@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Text, TouchableOpacity, StyleSheet, FlatList, BackHandler } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import FontTest from "./FontTest";
+import IconGallery from "./IconGallery";
 import TokenTest from "./TokenTest";
 
 export default function ViewList() {
@@ -24,6 +25,7 @@ export default function ViewList() {
     () => [
       { id: "TokenTest", label: "TokenTest 화면 열기" },
       { id: "FontTest", label: "FontTest 화면 열기" },
+      { id: "IconGallery", label: "SVG 아이콘 (designcenter-figma)" },
     ],
     []
   );
@@ -34,6 +36,10 @@ export default function ViewList() {
 
   if (selectedView === "FontTest") {
     return <FontTest onBack={() => setSelectedView(null)} />;
+  }
+
+  if (selectedView === "IconGallery") {
+    return <IconGallery onBack={() => setSelectedView(null)} />;
   }
 
   return (
