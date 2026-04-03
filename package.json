@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.84.1",
-    "designcenter-figma": "git+https://github.com/uzncom/designcenter-figma.git#pub-uzncom",
+    "designcenter-figma": "git+https://github.com/uzncom/designcenter-figma.git",
     "react": "19.2.3",
     "react-native": "0.84.1",
     "react-native-safe-area-context": "^5.7.0"
