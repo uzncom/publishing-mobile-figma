@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import styles from "../css/styles";
+import styles from "../assets/css/styles";
 
 export default function TokenTest({ onBack }) {
   return (
