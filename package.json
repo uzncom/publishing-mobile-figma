@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "assets": "npx react-native-asset@2.1.1",
     "ios": "bash ./scripts/run-ios.sh",
     "pod-install": "cd ios && pod install",
     "lint": "eslint .",
