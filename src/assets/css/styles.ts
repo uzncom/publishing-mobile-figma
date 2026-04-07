@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
-import { tokens } from "designcenter-figma"; // designcenter-figma의 main이 dist/js/native-tokens.js라서 패키지 루트만 써도 동일
+import type { TextStyle } from "react-native";
+import { tokens } from "designcenter-figma";
 
 const styles = StyleSheet.create({
   app: {
@@ -18,14 +19,14 @@ const styles = StyleSheet.create({
 
   title: {
     fontSize: tokens.typo.title.mediumStrong.fontSize,
-    fontWeight: tokens.typo.title.mediumStrong.fontWeight,
+    fontWeight: tokens.typo.title.mediumStrong.fontWeight as TextStyle["fontWeight"],
     color: tokens.semantic.text.strong,
     marginBottom: 16,
   },
 
   description: {
     fontSize: tokens.typo.body.smallDefault.fontSize,
-    fontWeight: tokens.typo.body.smallDefault.fontWeight,
+    fontWeight: tokens.typo.body.smallDefault.fontWeight as TextStyle["fontWeight"],
     color: tokens.semantic.text.subtle,
     marginBottom: 24,
   },
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   primaryButtonText: {
     color: tokens.semantic.text.inverse,
     textAlign: "center",
-    fontWeight: tokens.fontWeight.medium,
+    fontWeight: tokens.fontWeight.medium as TextStyle["fontWeight"],
   },
 
   secondaryButton: {

@@ -1,10 +1,15 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from "react-native";
+import type { TextStyle } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "../assets/css/styles";
 import { getTokenFontItems, getTokenFontStyle } from "../utils/utils";
 
-const titleFontStyle = getTokenFontStyle(700);
+type ScreenProps = {
+  onBack: () => void;
+};
+
+const titleFontStyle = getTokenFontStyle(700) as TextStyle;
 const fontItems = getTokenFontItems();
 
 const languageCards = [
@@ -15,7 +20,7 @@ const languageCards = [
   { id: "num", title: "숫자", sample: "1 2 3 4 5 6 7 8 9" },
 ];
 
-export default function FontTest({ onBack }) {
+export default function FontTest({ onBack }: ScreenProps) {
   return (
     <SafeAreaView style={[styles.app, localStyles.screen]} edges={["top"]}>
       <View style={localStyles.header}>
@@ -45,7 +50,7 @@ export default function FontTest({ onBack }) {
                     <Text
                       style={[
                         localStyles.previewText,
-                        font.style,
+                        font.style as TextStyle,
                       ]}
                     >
                       {item.sample}

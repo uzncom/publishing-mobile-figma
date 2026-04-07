@@ -3,7 +3,11 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "../assets/css/styles";
 
-export default function TokenTest({ onBack }) {
+type ScreenProps = {
+  onBack: () => void;
+};
+
+export default function TokenTest({ onBack }: ScreenProps) {
   return (
     <SafeAreaView style={[styles.app, localStyles.screen]} edges={["top"]}>
       <View style={localStyles.header}>

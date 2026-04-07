@@ -5,8 +5,15 @@ import FontTest from "./FontTest";
 import IconGallery from "./IconGallery";
 import TokenTest from "./TokenTest";
 
+type ViewId = "TokenTest" | "FontTest" | "IconGallery";
+
+type ViewItem = {
+  id: ViewId;
+  label: string;
+};
+
 export default function ViewList() {
-  const [selectedView, setSelectedView] = useState(null);
+  const [selectedView, setSelectedView] = useState<ViewId | null>(null);
 
   useEffect(() => {
     const onHardwareBackPress = () => {
@@ -21,7 +28,7 @@ export default function ViewList() {
     return () => subscription.remove();
   }, [selectedView]);
 
-  const viewItems = useMemo(
+  const viewItems = useMemo<ViewItem[]>(
     () => [
       { id: "TokenTest", label: "TokenTest 화면 열기" },
       { id: "FontTest", label: "FontTest 화면 열기" },

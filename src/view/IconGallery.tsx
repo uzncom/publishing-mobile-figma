@@ -54,50 +54,69 @@ import {
   LabelZip,
 } from "designcenter-figma/icons";
 
+type ScreenProps = {
+  onBack: () => void;
+};
+
+type IconRenderProps = {
+  fill: string;
+  color: string;
+  opacity: number;
+};
+
+type SvgItem = {
+  id: string;
+  componentName: string;
+  colorMode: string;
+  render: (props: IconRenderProps) => React.ReactNode;
+};
+
+type BuildSvgItemsResult = SvgItem[] | { error: string };
+
 /** publishing-figma/src/views/Svg.js 의 ICON_ITEMS 와 동일 */
 const ICON_ITEMS = [
-  { name: "IcBell", render: (props) => <IcBell {...props} /> },
-  { name: "IcBoardArrRight", render: (props) => <IcBoardArrRight {...props} /> },
-  { name: "IcCalendar", render: (props) => <IcCalendar {...props} /> },
-  { name: "IcCheckCircle", render: (props) => <IcCheckCircle {...props} /> },
-  { name: "IcCheckBlue18", render: (props) => <IcCheckBlue18 {...props} /> },
-  { name: "IcCheckBlue24", render: (props) => <IcCheckBlue24 {...props} /> },
-  { name: "IcCheckbox", render: (props) => <IcCheckbox {...props} /> },
-  { name: "IcChevDownBlueGray18", render: (props) => <IcChevDownBlueGray18 {...props} /> },
-  { name: "IcChevDownBlack24", render: (props) => <IcChevDownBlack24 {...props} /> },
-  { name: "IcChevLeftEnabled18", render: (props) => <IcChevLeftEnabled18 {...props} /> },
-  { name: "IcChevLeftBlack24", render: (props) => <IcChevLeftBlack24 {...props} /> },
-  { name: "IcCircleIncrease", render: (props) => <IcCircleIncrease {...props} /> },
-  { name: "IcClip", render: (props) => <IcClip {...props} /> },
-  { name: "IcClose", render: (props) => <IcClose {...props} /> },
-  { name: "IcCloseCircle", render: (props) => <IcCloseCircle {...props} /> },
-  { name: "IcCompanyWhite14", render: (props) => <IcCompanyWhite14 {...props} /> },
-  { name: "IcCompanyBlack18", render: (props) => <IcCompanyBlack18 {...props} /> },
-  { name: "IcDeleteBlack18", render: (props) => <IcDeleteBlack18 {...props} /> },
-  { name: "IcDeleteBlack24", render: (props) => <IcDeleteBlack24 {...props} /> },
-  { name: "IcDeleteWhite24", render: (props) => <IcDeleteWhite24 {...props} /> },
-  { name: "IcErrorCircle", render: (props) => <IcErrorCircle {...props} /> },
-  { name: "IcEyeOff", render: (props) => <IcEyeOff {...props} /> },
-  { name: "IcImg", render: (props) => <IcImg {...props} /> },
-  { name: "IcInfoCircle", render: (props) => <IcInfoCircle {...props} /> },
-  { name: "IcLightbulb", render: (props) => <IcLightbulb {...props} /> },
-  { name: "IcMegaphone", render: (props) => <IcMegaphone {...props} /> },
-  { name: "IcMore", render: (props) => <IcMore {...props} /> },
-  { name: "IcPdf", render: (props) => <IcPdf {...props} /> },
-  { name: "IcPencilbox", render: (props) => <IcPencilbox {...props} /> },
-  { name: "IcPpt", render: (props) => <IcPpt {...props} /> },
-  { name: "IcSetting", render: (props) => <IcSetting {...props} /> },
-  { name: "IcTime", render: (props) => <IcTime {...props} /> },
-  { name: "IcUser", render: (props) => <IcUser {...props} /> },
-  { name: "IcUsersCheck", render: (props) => <IcUsersCheck {...props} /> },
-  { name: "IcUsersPen", render: (props) => <IcUsersPen {...props} /> },
-  { name: "IcWifiOff", render: (props) => <IcWifiOff {...props} /> },
-  { name: "IcZip", render: (props) => <IcZip {...props} /> },
-  { name: "IconCircleIncreseTest", render: (props) => <IconCircleIncreseTest {...props} /> },
-  { name: "LabelImg", render: (props) => <LabelImg {...props} /> },
-  { name: "LabelPdf", render: (props) => <LabelPdf {...props} /> },
-  { name: "LabelPpt", render: (props) => <LabelPpt {...props} /> },
-  { name: "LabelZip", render: (props) => <LabelZip {...props} /> },
+  { name: "IcBell", render: (props: IconRenderProps) => <IcBell {...props} /> },
+  { name: "IcBoardArrRight", render: (props: IconRenderProps) => <IcBoardArrRight {...props} /> },
+  { name: "IcCalendar", render: (props: IconRenderProps) => <IcCalendar {...props} /> },
+  { name: "IcCheckCircle", render: (props: IconRenderProps) => <IcCheckCircle {...props} /> },
+  { name: "IcCheckBlue18", render: (props: IconRenderProps) => <IcCheckBlue18 {...props} /> },
+  { name: "IcCheckBlue24", render: (props: IconRenderProps) => <IcCheckBlue24 {...props} /> },
+  { name: "IcCheckbox", render: (props: IconRenderProps) => <IcCheckbox {...props} /> },
+  { name: "IcChevDownBlueGray18", render: (props: IconRenderProps) => <IcChevDownBlueGray18 {...props} /> },
+  { name: "IcChevDownBlack24", render: (props: IconRenderProps) => <IcChevDownBlack24 {...props} /> },
+  { name: "IcChevLeftEnabled18", render: (props: IconRenderProps) => <IcChevLeftEnabled18 {...props} /> },
+  { name: "IcChevLeftBlack24", render: (props: IconRenderProps) => <IcChevLeftBlack24 {...props} /> },
+  { name: "IcCircleIncrease", render: (props: IconRenderProps) => <IcCircleIncrease {...props} /> },
+  { name: "IcClip", render: (props: IconRenderProps) => <IcClip {...props} /> },
+  { name: "IcClose", render: (props: IconRenderProps) => <IcClose {...props} /> },
+  { name: "IcCloseCircle", render: (props: IconRenderProps) => <IcCloseCircle {...props} /> },
+  { name: "IcCompanyWhite14", render: (props: IconRenderProps) => <IcCompanyWhite14 {...props} /> },
+  { name: "IcCompanyBlack18", render: (props: IconRenderProps) => <IcCompanyBlack18 {...props} /> },
+  { name: "IcDeleteBlack18", render: (props: IconRenderProps) => <IcDeleteBlack18 {...props} /> },
+  { name: "IcDeleteBlack24", render: (props: IconRenderProps) => <IcDeleteBlack24 {...props} /> },
+  { name: "IcDeleteWhite24", render: (props: IconRenderProps) => <IcDeleteWhite24 {...props} /> },
+  { name: "IcErrorCircle", render: (props: IconRenderProps) => <IcErrorCircle {...props} /> },
+  { name: "IcEyeOff", render: (props: IconRenderProps) => <IcEyeOff {...props} /> },
+  { name: "IcImg", render: (props: IconRenderProps) => <IcImg {...props} /> },
+  { name: "IcInfoCircle", render: (props: IconRenderProps) => <IcInfoCircle {...props} /> },
+  { name: "IcLightbulb", render: (props: IconRenderProps) => <IcLightbulb {...props} /> },
+  { name: "IcMegaphone", render: (props: IconRenderProps) => <IcMegaphone {...props} /> },
+  { name: "IcMore", render: (props: IconRenderProps) => <IcMore {...props} /> },
+  { name: "IcPdf", render: (props: IconRenderProps) => <IcPdf {...props} /> },
+  { name: "IcPencilbox", render: (props: IconRenderProps) => <IcPencilbox {...props} /> },
+  { name: "IcPpt", render: (props: IconRenderProps) => <IcPpt {...props} /> },
+  { name: "IcSetting", render: (props: IconRenderProps) => <IcSetting {...props} /> },
+  { name: "IcTime", render: (props: IconRenderProps) => <IcTime {...props} /> },
+  { name: "IcUser", render: (props: IconRenderProps) => <IcUser {...props} /> },
+  { name: "IcUsersCheck", render: (props: IconRenderProps) => <IcUsersCheck {...props} /> },
+  { name: "IcUsersPen", render: (props: IconRenderProps) => <IcUsersPen {...props} /> },
+  { name: "IcWifiOff", render: (props: IconRenderProps) => <IcWifiOff {...props} /> },
+  { name: "IcZip", render: (props: IconRenderProps) => <IcZip {...props} /> },
+  { name: "IconCircleIncreseTest", render: (props: IconRenderProps) => <IconCircleIncreseTest {...props} /> },
+  { name: "LabelImg", render: (props: IconRenderProps) => <LabelImg {...props} /> },
+  { name: "LabelPdf", render: (props: IconRenderProps) => <LabelPdf {...props} /> },
+  { name: "LabelPpt", render: (props: IconRenderProps) => <LabelPpt {...props} /> },
+  { name: "LabelZip", render: (props: IconRenderProps) => <LabelZip {...props} /> },
 ];
 
 const PREVIEW_STATES = ["default", "hover", "disabled"];
@@ -116,7 +135,7 @@ const PAGE_PAD = 20;
 const GRID_GAP = 12;
 const CARD_MIN_W = 220;
 
-function buildSvgItems() {
+function buildSvgItems(): BuildSvgItemsResult {
   try {
     return ICON_ITEMS.map(({ name, render }) => ({
       id: name,
@@ -129,7 +148,7 @@ function buildSvgItems() {
   }
 }
 
-export default function IconGallery({ onBack }) {
+export default function IconGallery({ onBack }: ScreenProps) {
   const [previewState, setPreviewState] = useState("default");
 
   const { svgItems, loadError } = useMemo(() => {
