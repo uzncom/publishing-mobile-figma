@@ -64,7 +64,7 @@ export const MainHome = () => {
     const coachmarkOn = false;
 
     return (
-        <SafeAreaView style={[commons.flex1,main.mainWrap,commons.vBox,commCon.viewBg, {flex: 1}]} edges={["top"]}> 
+        <View style={[commons.flex1,main.mainWrap,commons.vBox,commCon.viewBg]}> 
             <ScrollView style={[commons.flex1,commons.vBox]}>
                 <View style={[commons.vBox,main.headerBg]}>
                     {/* 로고 및 메뉴 */}
@@ -434,7 +434,7 @@ export const MainHome = () => {
                 </View>
                 : null
             }
-        </SafeAreaView>       
+        </View>       
     );
 };
 
