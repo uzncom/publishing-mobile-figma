@@ -1,53 +1,37 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
-import { commons, fmFonts, commCon, fontColor, snackBar } from '../../../assets/css/common'
+import { commons, fmFonts, commCon, fontColor } from '../../../assets/css/common'
 import { main, coachmark, DJBank } from '../../../assets/css/contents'
 import LinearGradient from 'react-native-linear-gradient';
 import LottieView from 'lottie-react-native';
-
+import { SafeAreaView } from 'react-native-safe-area-context';
+  
 // 이미지 호출
 import logo_forme_24_bk_enabled from '../../../assets/imgs/bg/logo_forme_24_bk_enabled3x.png';                     // 로고
 import menu_outlined_bd_24_bk_enabled from '../../../assets/imgs/ico/ic_menu_outlined_bd_24_bk_enabled3x.png';     // 메뉴 enabled
-import menu_outlined_bd_24_bk_pressed from '../../../assets/imgs/ico/ic_menu_outlined_bd_24_bk_pressed3x.png';     // 메뉴 pressed
-import menu_outlined_bd_24_bk_disabled from '../../../assets/imgs/ico/ic_menu_outlined_bd_24_bk_disabled3x.png';   // 메뉴 disabled
 import character_morning_176 from '../../../assets/imgs/bg/img_character_morning_1763x.png';                       // 캐릭터 이미지
 import company_outlined_18_wh_enabled from '../../../assets/imgs/ico/ic_company_outlined_18_wh_enabled3x.png';     // 회사 아이콘
 import user_check_filled_48_enabled from '../../../assets/imgs/ico/ic_user_check_filled_48_enabled3x.png';         // 출퇴근체크
-import user_check_filled_48_disabled from '../../../assets/imgs/ico/ic_user_check_filled_48_disabled3x.png';       // 출퇴근체크
 import company_time_filled_48_enabled from '../../../assets/imgs/ico/ic_company_time_filled_48_enabled3x.png';     // 근무시간동의
-import company_time_filled_48_disabled from '../../../assets/imgs/ico/ic_company_time_filled_48_disabled3x.png';   // 근무시간동의
 
 import folder_user_filled_48_enabled from '../../../assets/imgs/ico/ic_folder_user_filled_48_enabled3x.png';       // 증명서관리
 import user_time_filled_48_enabled from '../../../assets/imgs/ico/ic_user_time_filled_48_enabled3x.png';           // 근무시간
-import user_time_filled_48_disabled from '../../../assets/imgs/ico/ic_user_time_filled_48_disabled3x.png';         // 근무시간 disabled
 import briefcase_filled_48_enabled from '../../../assets/imgs/ico/ic_briefcase_filled_48_enabled3x.png';           // 근태관리
-import briefcase_filled_48_disabled from '../../../assets/imgs/ico/ic_briefcase_filled_48_disabled3x.png';         // 근태관리 disabled
 import mail_open_pay_filled_48_enabled from '../../../assets/imgs/ico/ic_mail_open_pay_filled_48_enabled3x.png';   // 급여명세서
-import calendar_filled_48_disabled from '../../../assets/imgs/ico/ic_calendar_filled_48_disabled3x.png';           // 휴가관리 disabled
-import calendar_filled_48_enabled from '../../../assets/imgs/ico/ic_calendar_filled_48_enabled3x.png';             // 휴가관리
 import computer_edu_filled_48_enabled from '../../../assets/imgs/ico/ic_computer_edu_filled_48_enabled3x.png';     // 법정의무교육 
-import computer_edu_filled_48_disabled from '../../../assets/imgs/ico/ic_computer_edu_filled_48_disabled3x.png';   // 법정의무교육 disabled
 
 import users_check_outlined_md_32_bk_enabled from '../../../assets/imgs/ico/ic_users_check_outlined_md_32_bk_enabled3x.png';    // 근무시간승인
-import users_check_outlined_md_32_bk_disabled from '../../../assets/imgs/ico/ic_users_check_outlined_md_32_bk_disabled3x.png';  // 근무시간승인 disabled
-import users_check_outlined_md_32_bk_pressed from '../../../assets/imgs/ico/ic_users_check_outlined_md_32_bk_pressed3x.png';    // 근무시간승인 pressed
 
 import users_pen_outlined_md_32_bk_enabled from '../../../assets/imgs/ico/ic_users_pen_outlined_md_32_bk_enabled3x.png';       // 근태결재승인
-import users_pen_outlined_md_32_bk_disabled from '../../../assets/imgs/ico/ic_users_pen_outlined_md_32_bk_enabled3x.png';      // 근태결재승인 disabled
-import users_pen_outlined_md_32_bk_pressed from '../../../assets/imgs/ico/ic_users_pen_outlined_md_32_bk_pressed3x.png';       // 근태결재승인 pressed
 
 import pocket_pay_coin_filled_48_enabled from '../../../assets/imgs/ico/ic_pocket_pay_coin_filled_48_enabled3x.png';          // 연말정산
 
 import guide_80_enabled from '../../../assets/imgs/bg/img_guide_80_enabled3x.png';                                        // Forme 처음이신가요?
 import chev_right_outlined_18_bk_enabled from '../../../assets/imgs/ico/ic_chev_right_outlined_18_bk_enabled3x.png';      // Forme 처음이신가요? 화살표
 
-import error_circle_filled_24_ye_enabled from '../../../assets/imgs/ico/ic_error_circle_filled_24_ye_enabled3x.png';      // 스낵바 check
-import home_circle_filled_48_bl_enabled from '../../../assets/imgs/ico/ic_home_circle_filled_48_bl_enabled3x.png';        // 홈
-
 import coachmark_01_1_arr from '../../../assets/imgs/coachmark/coachmark_01_1_arr3x.png'; // 코치마크 화살표
 import coachmark_01_2_arr from '../../../assets/imgs/coachmark/coachmark_01_2_arr3x.png'; // 코치마크 화살표
 import coachmark_01_3_arr from '../../../assets/imgs/coachmark/coachmark_01_3_arr3x.png'; // 코치마크 화살표
-import checkbox_unselected_24_enabled from '../../../assets/imgs/ico/checkbox_unselected_24_enabled3x.png'; // 체크 unselected
 import checkbox_selected_24_enabled from '../../../assets/imgs/ico/checkbox_selected_24_enabled3x.png'; // 체크 selected
 import close_outlined_bd_24_wh_enabled from '../../../assets/imgs/ico/ic_close_outlined_bd_24_wh_enabled3x.png'; // 코치마크 닫기
 import attnBl from '../../../assets/imgs/ico/ic_circle_attnBl2x.png';
@@ -63,7 +47,7 @@ import bank_img_bg from '../../../assets/imgs/bg/bank_img_bg3x.png';
 import list_18_ic_chev_right_outlined_18_bk_enabled from '../../../assets/imgs/temp/list_18_ic_chev_right_outlined_18_bk_enabled3x.png';    
 
 // 메인
-const MainHome = () => {
+export const MainHome = () => {
     // pressed 상태값 예시
     const [isPressed, setIsPressed] = useState<{[key: number]: boolean}>({
         1: false,
@@ -80,7 +64,7 @@ const MainHome = () => {
     const coachmarkOn = false;
 
     return (
-        <View style={[commons.flex1,main.mainWrap,commons.vBox,commCon.viewBg]}> 
+        <SafeAreaView style={[commons.flex1,main.mainWrap,commons.vBox,commCon.viewBg, {flex: 1}]} edges={["top"]}> 
             <ScrollView style={[commons.flex1,commons.vBox]}>
                 <View style={[commons.vBox,main.headerBg]}>
                     {/* 로고 및 메뉴 */}
@@ -450,7 +434,7 @@ const MainHome = () => {
                 </View>
                 : null
             }
-        </View>       
+        </SafeAreaView>       
     );
 };
 

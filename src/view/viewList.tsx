@@ -4,8 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import FontTest from "./FontTest";
 import IconGallery from "./IconGallery";
 import TokenTest from "./TokenTest";
+import { MainHome } from "../components/screens/Main/MainHome";
 
-type ViewId = "TokenTest" | "FontTest" | "IconGallery";
+type ViewId = "TokenTest" | "FontTest" | "IconGallery" | "MainHome";
 
 type ViewItem = {
   id: ViewId;
@@ -33,6 +34,7 @@ export default function ViewList() {
       { id: "TokenTest", label: "TokenTest 화면 열기" },
       { id: "FontTest", label: "FontTest 화면 열기" },
       { id: "IconGallery", label: "SVG 아이콘 (designcenter-figma)" },
+      { id: "MainHome", label: "MainHome 화면 열기" },
     ],
     []
   );
@@ -47,6 +49,10 @@ export default function ViewList() {
 
   if (selectedView === "IconGallery") {
     return <IconGallery onBack={() => setSelectedView(null)} />;
+  }
+
+  if (selectedView === "MainHome") {
+    return <MainHome />;
   }
 
   return (

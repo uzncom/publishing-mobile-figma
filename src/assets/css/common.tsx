@@ -1,4 +1,6 @@
 import { Platform, StatusBar } from 'react-native';
+import { tokens } from "designcenter-figma";
+import { getTokenFontStyle } from "../../utils/utils";
 
 // 퍼블리싱 네비게이션
 export const pubHome : any = {
@@ -8,21 +10,21 @@ export const pubHome : any = {
 
 // font 영역에 사용되는 클래스 
 export const fmFonts : any = {
-    normal: { fontFamily: 'Pretendard-Regular', color: '#1d2129',fontSize:12},   //fmFonts.normal
-    bold: { fontFamily: 'Pretendard-Bold', color: '#1d2129',fontSize:12},        //fmFonts.bold
-    medium: { fontFamily: 'Pretendard-Medium', color: '#1d2129',fontSize:12},    //fmFonts.medium
+    normal: { ...getTokenFontStyle(tokens.fontWeight.regular), color: tokens.semantic.text.strong,fontSize:tokens.typo.caption.largeDefault.fontSize},   //fmFonts.normal
+    bold: { ...getTokenFontStyle(tokens.fontWeight.bold), color: tokens.semantic.text.strong,fontSize:tokens.typo.caption.largeDefault.fontSize},        //fmFonts.bold
+    medium: { ...getTokenFontStyle(tokens.fontWeight.medium), color: tokens.semantic.text.strong,fontSize:tokens.typo.caption.largeDefault.fontSize},    //fmFonts.medium
 
     al: { textAlign: 'left' },    //fmFonts.al
     ar: { textAlign: 'right' },   //fmFonts.ar
     ac: { textAlign: 'center' },  //fmFonts.ac
-    f13: {fontSize: 13},          //fmFonts.f13
-    f14: {fontSize: 14},          //fmFonts.f14
-    f15: {fontSize: 15},          //fmFonts.f15
+    f13: {fontSize:tokens.typo.body.xsmallDefault.fontSize},          //fmFonts.f13
+    f14: {fontSize:tokens.typo.body.smallDefault.fontSize},          //fmFonts.f14
+    f15: {fontSize:tokens.typo.body.mediumDefault.fontSize},          //fmFonts.f15
     f21: {fontSize: 21},          //fmFonts.f21
-    f22: {fontSize: 22},          //fmFonts.f22
+    f22: {fontSize:tokens.typo.title.largeStronger.fontSize},          //fmFonts.f22
 
     lh17: {lineHeight: 17},        //fmFonts.lh17
-    lh18: {lineHeight: 18},        //fmFonts.lh18
+    lh18: {lineHeight:tokens.typo.body.xsmallDefault.lineHeight},        //fmFonts.lh18
 }
 
 // 공통
@@ -178,7 +180,7 @@ export const commons : any = {
 
     //border
     borderN:{borderWidth:0, borderStyle:'solid', borderColor:'rgba(0, 0, 0, 0)',},
-    borderB:{borderBottomWidth:1, borderStyle:'solid', borderColor:'#ced0d6'}, // commons.borderB
+    borderB:{borderBottomWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralDefault}, // commons.borderB
     borderBn:{borderBottomWidth:0}, // commons.borderBn
 
     // **************************************************
@@ -206,12 +208,12 @@ export const commons : any = {
 }
 
 export const fontColor : any = {
-    blue : {color:'#4480f0'},       //fontColor.blue
-    gray : {color:'#7e8996'},       //fontColor.gray
-    lightGray : {color:'#ced0d6'},  //fontColor.lightGray
+    blue : {color:tokens.semantic.text.brandDefault},       //fontColor.blue
+    gray : {color:tokens.semantic.text.subtlest},       //fontColor.gray
+    lightGray : {color:tokens.semantic.text.disabledDefault},  //fontColor.lightGray
     red : {color:'#e65364'},        //fontColor.red
     yellow : {color:'#f29a4e'},     //fontColor.yellow
-    white : {color:'#ffffff'},      //fontColor.white
+    white : {color:tokens.semantic.text.inverse},      //fontColor.white
 }
 
 // 컨텐츠 공통
@@ -220,139 +222,139 @@ export const commCon : any = {
     // view 공통
     // **************************************************
     viewBox: { paddingHorizontal: 24 },                                            // commCon.viewBox
-    viewBg: { backgroundColor: '#fff'},                                            // commCon.viewBg
-    viewBgBlue: { position:'relative',backgroundColor: '#f5f7fa'},                 // commCon.viewBgBlue
-    viewStickyBg : {backgroundColor: '#fff', borderBottomWidth:1, borderStyle:'solid', borderBottomColor:'#f0f2f4'}, // commCon.viewStickyBg
+    viewBg: { backgroundColor: tokens.semantic.bg.inverse},                                            // commCon.viewBg
+    viewBgBlue: { position:'relative',backgroundColor: tokens.semantic.bg.accentBluegraySubtlest},                 // commCon.viewBgBlue
+    viewStickyBg : {backgroundColor: tokens.semantic.bg.inverse, borderBottomWidth:1, borderStyle:'solid', borderBottomColor:tokens.semantic.border.neutralSubtler}, // commCon.viewStickyBg
     botSheetLine: {
-        borderTopWidth:1, borderStyle:'solid', borderColor:'#f2f2f2',backgroundColor:'#ffffff',
+        borderTopWidth:1, borderStyle:'solid', borderColor:'#f2f2f2',backgroundColor:tokens.semantic.bg.inverse,
         // box shadow
         shadowColor: "#000000",shadowOffset: {width: 0,height: -4},shadowOpacity: 0.02,elevation: 12
 
     },  // commCon.botSheetLine
-    botSheetLineNoSd: {borderTopWidth:1, borderStyle:'solid', borderColor:'#f2f2f2',backgroundColor:'#ffffff'}, // botSheetLine 쉐도우 없는 버전 (갤럭시 oneUi 5.0 이슈)
-    bullet : {width:2, height:2, borderRadius:2, marginTop:(18 - 2) / 2, marginRight:4, backgroundColor:'#7e8996'}, // 불릿
-    bulletText : {lineHeight:18, letterSpacing: -0.18, color:'#5d6677'}, // 불릿텍스트
+    botSheetLineNoSd: {borderTopWidth:1, borderStyle:'solid', borderColor:'#f2f2f2',backgroundColor:tokens.semantic.bg.inverse}, // botSheetLine 쉐도우 없는 버전 (갤럭시 oneUi 5.0 이슈)
+    bullet : {width:2, height:2, borderRadius:2, marginTop:(18 - 2) / 2, marginRight:4, backgroundColor:tokens.semantic.bg.accentBluegrayDefault}, // 불릿
+    bulletText : {lineHeight:tokens.typo.body.xsmallDefault.lineHeight, letterSpacing: -0.18, color:tokens.semantic.text.subtle}, // 불릿텍스트
 
     // **************************************************
     // empty
     // **************************************************
-    emptyText01 : { fontSize:15, textAlign:'center', letterSpacing:-0.22, color:'#7e8996' },   // commCon.emptyText01
-    emptyText02 : { marginTop:4, fontSize:13, textAlign:'center', letterSpacing:-0.2, color:'#b0b5bf' },    // commCon.emptyText02
-    emptyTextBox : {marginHorizontal:24,padding:20,borderRadius:12,                backgroundColor:'#ffffff'},
-    emptyTextTit : {marginBottom:6,fontFamily: 'Pretendard-Bold',fontSize:12, textAlign:'left', letterSpacing:-0.18, color:'#353c49'},
-    emptyTextTxt : {marginTop:6,fontFamily: 'Pretendard-Regular',fontSize:12, textAlign:'left', letterSpacing:-0.18, color:'#7e8996'},
+    emptyText01 : { fontSize:tokens.typo.body.mediumDefault.fontSize, textAlign:'center', letterSpacing:-0.22, color:tokens.semantic.text.subtlest },   // commCon.emptyText01
+    emptyText02 : { marginTop:4, fontSize:tokens.typo.body.xsmallDefault.fontSize, textAlign:'center', letterSpacing:-0.2, color:tokens.semantic.text.disabledStrong },    // commCon.emptyText02
+    emptyTextBox : {marginHorizontal:24,padding:20,borderRadius:12, backgroundColor:tokens.semantic.bg.inverse},
+    emptyTextTit : {marginBottom:6,...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.caption.largeDefault.fontSize, textAlign:'left', letterSpacing:-0.18, color:tokens.semantic.text.default},
+    emptyTextTxt : {marginTop:6,...getTokenFontStyle(tokens.typo.body.xsmallDefault.fontWeight),fontSize:tokens.typo.caption.largeDefault.fontSize, textAlign:'left', letterSpacing:-0.18, color:tokens.semantic.text.subtlest},
 
     // **************************************************
     // 탭
     // **************************************************
-    contentsTabsWrap : {paddingBottom:16,backgroundColor:'#ffffff'},
-    contentsTabs : {borderBottomWidth:1, borderStyle:'solid', borderBottomColor:'#f0f2f4',backgroundColor:'#ffffff'},
+    contentsTabsWrap : {paddingBottom:16,backgroundColor:tokens.semantic.bg.inverse},
+    contentsTabs : {borderBottomWidth:1, borderStyle:'solid', borderBottomColor:tokens.semantic.border.neutralSubtler,backgroundColor:tokens.semantic.bg.inverse},
     contentsTabItem : {height:40,marginHorizontal:24,borderBottomWidth:2, borderStyle:'solid', borderBottomColor:'transparent'},
-    contentsTabItemOn : {height:40,marginHorizontal:24,borderBottomWidth:2, borderStyle:'solid', borderBottomColor:'#4480f0'},
-    contentsTabItemOnPress : {height:40,marginHorizontal:24,borderBottomWidth:2, borderStyle:'solid', borderBottomColor:'#386bc9'},
-    contentsTabItemOnDisabled : {height:40,marginHorizontal:24,borderBottomWidth:2, borderStyle:'solid', borderBottomColor:'#c3d6fa'},
-    contentsTabItemText : {fontFamily: 'Pretendard-Medium',fontSize:16, letterSpacing:-0.32, color:'#7e8996'},
-    contentsTabItemTextPress : {fontFamily: 'Pretendard-Medium',fontSize:16, letterSpacing:-0.32, color:'#5d6677'},
-    contentsTabItemTextDisabled : {fontFamily: 'Pretendard-Medium',fontSize:16, letterSpacing:-0.32, color:'#ced0d6'},
-    contentsTabItemTextOn : {fontFamily: 'Pretendard-Bold', fontSize:16, letterSpacing:-0.32, color:'#4480f0'},
-    contentsTabItemTextOnPress : {fontFamily: 'Pretendard-Bold',fontSize:16, letterSpacing:-0.32, color:'#386bc9'},
-    contentsTabItemTextOnDisabled : {fontFamily: 'Pretendard-Bold',fontSize:16, letterSpacing:-0.32, color:'#c3d6fa'},
-    btnTabWrap : {marginTop:12, borderRadius:8, backgroundColor:'#f7f8fa'},
-    btnTabOn : {position:'absolute', top:0, left:0, bottom:0, right:0, borderWidth:1, borderStyle:'solid', borderColor:'#4480f0', borderRadius:8, backgroundColor:'#f4f8ff'},
-    btnTabDisa : {position:'absolute', top:0, left:0, bottom:0, right:0, borderWidth:1, borderStyle:'solid', borderColor:'#c3d6fa', borderRadius:8, backgroundColor:'#f4f8ff'},
-    btnTabText : {fontSize:13, fontFamily: 'Pretendard-Medium', textAlign:'center', letterSpacing:-0.2, color:'#7e8996'},
-    btnTabTextDisa : {fontSize:13, fontFamily: 'Pretendard-Medium', textAlign:'center', letterSpacing:-0.2, color:'#ced0d6'},
-    btnTabTextOnDisa : {fontSize:13, fontFamily: 'Pretendard-Medium', textAlign:'center', letterSpacing:-0.2, color:'#a1bff7'},
+    contentsTabItemOn : {height:40,marginHorizontal:24,borderBottomWidth:2, borderStyle:'solid', borderBottomColor:tokens.semantic.border.brandDefault},
+    contentsTabItemOnPress : {height:40,marginHorizontal:24,borderBottomWidth:2, borderStyle:'solid', borderBottomColor:tokens.semantic.border.selectedPressed},
+    contentsTabItemOnDisabled : {height:40,marginHorizontal:24,borderBottomWidth:2, borderStyle:'solid', borderBottomColor:tokens.semantic.border.selectedDisabled},
+    contentsTabItemText : {...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),fontSize:tokens.typo.body.largeDefault.fontSize, letterSpacing:-0.32, color:tokens.semantic.text.subtlest},
+    contentsTabItemTextPress : {...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),fontSize:tokens.typo.body.largeDefault.fontSize, letterSpacing:-0.32, color:tokens.semantic.text.subtle},
+    contentsTabItemTextDisabled : {...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),fontSize:tokens.typo.body.largeDefault.fontSize, letterSpacing:-0.32, color:tokens.semantic.text.disabledDefault},
+    contentsTabItemTextOn : {...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight), fontSize:tokens.typo.body.largeDefault.fontSize, letterSpacing:-0.32, color:tokens.semantic.text.brandDefault},
+    contentsTabItemTextOnPress : {...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.body.largeDefault.fontSize, letterSpacing:-0.32, color:tokens.semantic.text.selectedPressed},
+    contentsTabItemTextOnDisabled : {...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.body.largeDefault.fontSize, letterSpacing:-0.32, color:tokens.semantic.text.selectedDisabled},
+    btnTabWrap : {marginTop:12, borderRadius:8, backgroundColor:tokens.semantic.bg.neutralSubtle},
+    btnTabOn : {position:'absolute', top:0, left:0, bottom:0, right:0, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.brandDefault, borderRadius:8, backgroundColor:tokens.semantic.bg.selected},
+    btnTabDisa : {position:'absolute', top:0, left:0, bottom:0, right:0, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.selectedDisabled, borderRadius:8, backgroundColor:tokens.semantic.bg.selected},
+    btnTabText : {fontSize:tokens.typo.body.xsmallDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight), textAlign:'center', letterSpacing:-0.2, color:tokens.semantic.text.subtlest},
+    btnTabTextDisa : {fontSize:tokens.typo.body.xsmallDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight), textAlign:'center', letterSpacing:-0.2, color:tokens.semantic.text.disabledDefault},
+    btnTabTextOnDisa : {fontSize:tokens.typo.body.xsmallDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight), textAlign:'center', letterSpacing:-0.2, color:'#a1bff7'},
     tabNumBall : {justifyContent:'center',alignItems:'center', width:20, height:20, marginRight:6, borderRadius:30, backgroundColor:'#b0b5bf'},
-    tabNumBallOn : {width:20, height:20, borderRadius:30, backgroundColor:'#4480f0'},
+    tabNumBallOn : {width:20, height:20, borderRadius:30, backgroundColor:tokens.semantic.bg.brandDefault},
     
     // **************************************************
     // 컴포넌트
     // **************************************************
-    textInput :{fontFamily: 'Pretendard-Medium',marginTop:15, marginBottom:14, fontSize:15, letterSpacing:-0.23, color:'#1d2129', padding:0},
-    textInputDisabled :{fontFamily: 'Pretendard-Medium',marginTop:15, marginBottom:14, fontSize:15, letterSpacing:-0.23, color:'#ced0d6', padding:0},
-    textArea :{fontFamily: 'Pretendard-Regular', fontSize:14, letterSpacing:-0.21, color:'#1d2129'},
+    textInput :{...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),marginTop:15, marginBottom:14, fontSize:tokens.typo.body.mediumDefault.fontSize, letterSpacing:-0.23, color:tokens.semantic.text.strong, padding:0},
+    textInputDisabled :{...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),marginTop:15, marginBottom:14, fontSize:tokens.typo.body.mediumDefault.fontSize, letterSpacing:-0.23, color:tokens.semantic.text.disabledDefault, padding:0},
+    textArea :{...getTokenFontStyle(tokens.typo.body.xsmallDefault.fontWeight), fontSize:tokens.typo.body.smallDefault.fontSize, letterSpacing:-0.21, color:tokens.semantic.text.strong},
 
     textInputWrap : {position:'relative'},
-    textInputBox : {height:56,borderWidth:1,borderRadius:12,borderColor:'#d8dbe2',paddingLeft:16,paddingRight:48,fontSize:15, letterSpacing:-0.23, color:'#1d2129'},
-    textInputBoxFocus : {borderColor:'#4480f0'},
+    textInputBox : {height:56,borderWidth:1,borderRadius:12,borderColor:tokens.semantic.border.neutralSubtle,paddingLeft:16,paddingRight:48,fontSize:tokens.typo.body.mediumDefault.fontSize, letterSpacing:-0.23, color:tokens.semantic.text.strong},
+    textInputBoxFocus : {borderColor:tokens.semantic.border.brandDefault},
     textInputBoxError : {borderColor:'#e65364'},
-    textInputBoxDisa : {backgroundColor:'#f7f8fa'},
-    textInputBoxPw : {height:56,borderWidth:1,borderRadius:12,borderColor:'#d8dbe2',paddingLeft:16,paddingRight:80,fontSize:15, letterSpacing:-0.23, color:'#1d2129'},
+    textInputBoxDisa : {backgroundColor:tokens.semantic.bg.neutralSubtle},
+    textInputBoxPw : {height:56,borderWidth:1,borderRadius:12,borderColor:tokens.semantic.border.neutralSubtle,paddingLeft:16,paddingRight:80,fontSize:tokens.typo.body.mediumDefault.fontSize, letterSpacing:-0.23, color:tokens.semantic.text.strong},
     textInputBtn : {position:'absolute',top:15,right:0},
 
     textSearchWrap : {position:'relative'},
-    textSearchBox : {height:48,borderWidth:1,borderRadius:12,borderColor:'#d8dbe2',paddingLeft:16,paddingRight:80,fontSize:15, letterSpacing:-0.23, color:'#1d2129'},
-    textSearchBoxFocus : {borderColor:'#4480f0'},
+    textSearchBox : {height:48,borderWidth:1,borderRadius:12,borderColor:tokens.semantic.border.neutralSubtle,paddingLeft:16,paddingRight:80,fontSize:tokens.typo.body.mediumDefault.fontSize, letterSpacing:-0.23, color:tokens.semantic.text.strong},
+    textSearchBoxFocus : {borderColor:tokens.semantic.border.brandDefault},
     textSearchBtn : {position:'absolute'},
 
     // 스위치
     switchBox : {position:'relative',width:40,height:24,borderRadius:24,backgroundColor:'#d8dbe2'},
-    switchBoxOn : {position:'relative',width:40,height:24,borderRadius:24,backgroundColor:'#4480f0'},
-    switchBoxDisabled : {position:'relative',width:40,height:24,borderRadius:24,backgroundColor:'#c3d6fa'},
-    switchBtn : {position:'absolute',top:2,left:2,width:20,height:20,borderRadius:20,backgroundColor:'#ffffff'}, 
-    switchBtnOn : {position:'absolute',top:2,right:2,width:20,height:20,borderRadius:20,backgroundColor:'#ffffff'}, 
+    switchBoxOn : {position:'relative',width:40,height:24,borderRadius:24,backgroundColor:tokens.semantic.bg.brandDefault},
+    switchBoxDisabled : {position:'relative',width:40,height:24,borderRadius:24,backgroundColor:tokens.semantic.bg.brandSubtlest},
+    switchBtn : {position:'absolute',top:2,left:2,width:20,height:20,borderRadius:20,backgroundColor:tokens.semantic.bg.inverse}, 
+    switchBtnOn : {position:'absolute',top:2,right:2,width:20,height:20,borderRadius:20,backgroundColor:tokens.semantic.bg.inverse}, 
     switchBtnDisabled : {position:'absolute',top:2,right:2,width:20,height:20,borderRadius:20,backgroundColor:'rgba(255,255,255,0.74)'}, 
 
     smallSwitchBox : {position:'relative',width:32,height:18,borderRadius:18,backgroundColor:'#d8dbe2'},
-    smallSwitchBoxOn : {position:'relative',width:32,height:18,borderRadius:18,backgroundColor:'#4480f0'},
-    smallSwitchBoxDisabled : {position:'relative',width:32,height:18,borderRadius:18,backgroundColor:'#c3d6fa'},
-    smallSwitchBtn : {position:'absolute',top:2,left:2,width:14,height:14,borderRadius:14,backgroundColor:'#ffffff'}, 
-    smallSwitchBtnOn : {position:'absolute',top:2,right:2,width:14,height:14,borderRadius:14,backgroundColor:'#ffffff'}, 
+    smallSwitchBoxOn : {position:'relative',width:32,height:18,borderRadius:18,backgroundColor:tokens.semantic.bg.brandDefault},
+    smallSwitchBoxDisabled : {position:'relative',width:32,height:18,borderRadius:18,backgroundColor:tokens.semantic.bg.brandSubtlest},
+    smallSwitchBtn : {position:'absolute',top:2,left:2,width:14,height:14,borderRadius:14,backgroundColor:tokens.semantic.bg.inverse}, 
+    smallSwitchBtnOn : {position:'absolute',top:2,right:2,width:14,height:14,borderRadius:14,backgroundColor:tokens.semantic.bg.inverse}, 
     smallSwitchBtnDisabled : {position:'absolute',top:2,right:2,width:14,height:14,borderRadius:14,backgroundColor:'rgba(255,255,255,0.74)'}, 
 
-    bigSwitchBox : {position:'relative',height:48,paddingHorizontal:4,paddingVertical:4,borderRadius:24,backgroundColor:'#f0f2f4'},
-    bigSwitch_p : {position:'relative',height:'100%',borderRadius:20,backgroundColor:'#e1e3e6'},
-    bigSwitchOn : {position:'relative',height:'100%',borderRadius:20,backgroundColor:'#ffffff',shadowColor: "#000000",shadowOffset: {width: 0,height: 2},shadowOpacity: 0.25, shadowRadius: 3.84, elevation: 5 },
-    bigSwitchOn_d : {position:'relative',height:'100%',borderRadius:20,backgroundColor:'#ffffff'},
-    bigSwitchOn_p : {position:'relative',height:'100%',borderRadius:20,backgroundColor:'#f7f8fa',shadowColor: "#000000",shadowOffset: {width: 0,height: 2},shadowOpacity: 0.29, shadowRadius: 4.65, elevation: 7},
-    bigSwitchText : {fontFamily:'Pretendard-Medium',fontSize:15,letterSpacing:-0.3,color:'#7e8996'},
-    bigSwitchText_d : {fontFamily:'Pretendard-Medium',fontSize:15,letterSpacing:-0.3,color:'#ced0d6'},
-    bigSwitchText_p : {fontFamily:'Pretendard-Medium',fontSize:15,letterSpacing:-0.3,color:'#5d6677'},
-    bigSwitchTextOn : {fontFamily:'Pretendard-Bold',fontSize:15,letterSpacing:-0.23,color:'#4480f0'},
-    bigSwitchTextOn_d : {fontFamily:'Pretendard-Bold',fontSize:15,letterSpacing:-0.23,color:'#c3d6fa'},
-    bigSwitchTextOn_p : {fontFamily:'Pretendard-Bold',fontSize:15,letterSpacing:-0.23,color:'#386bc9'},
+    bigSwitchBox : {position:'relative',height:48,paddingHorizontal:4,paddingVertical:4,borderRadius:24,backgroundColor:tokens.semantic.bg.neutralDefault},
+    bigSwitch_p : {position:'relative',height:'100%',borderRadius:20,backgroundColor:tokens.semantic.bg.neutralStrong},
+    bigSwitchOn : {position:'relative',height:'100%',borderRadius:20,backgroundColor:tokens.semantic.bg.inverse,shadowColor: "#000000",shadowOffset: {width: 0,height: 2},shadowOpacity: 0.25, shadowRadius: 3.84, elevation: 5 },
+    bigSwitchOn_d : {position:'relative',height:'100%',borderRadius:20,backgroundColor:tokens.semantic.bg.inverse},
+    bigSwitchOn_p : {position:'relative',height:'100%',borderRadius:20,backgroundColor:tokens.semantic.bg.neutralSubtle,shadowColor: "#000000",shadowOffset: {width: 0,height: 2},shadowOpacity: 0.29, shadowRadius: 4.65, elevation: 7},
+    bigSwitchText : {...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.3,color:tokens.semantic.text.subtlest},
+    bigSwitchText_d : {...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.3,color:tokens.semantic.text.disabledDefault},
+    bigSwitchText_p : {...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.3,color:tokens.semantic.text.subtle},
+    bigSwitchTextOn : {...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.23,color:tokens.semantic.text.brandDefault},
+    bigSwitchTextOn_d : {...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.23,color:tokens.semantic.text.selectedDisabled},
+    bigSwitchTextOn_p : {...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.23,color:tokens.semantic.text.selectedPressed},
 
     // 스크롤 탭
-    scrollTabWrap : {borderBottomWidth:1, borderBottomStyle:'solid', borderBottomColor:'#f0f2f4'},
+    scrollTabWrap : {borderBottomWidth:1, borderBottomStyle:'solid', borderBottomColor:tokens.semantic.border.neutralSubtler},
     scrollTab : {paddingTop:8, paddingBottom:13, marginHorizontal:12},
-    scrollTabOn : {paddingTop:8, paddingBottom:13, marginHorizontal:12, borderBottomWidth:2, borderBottomStyle:'solid', borderBottomColor:'#4480f0'},
-    scrollTabText : {fontSize:16, fontFamily:'Pretendard-Regular', letterSpacing:-0.32, color:'#7e8996'},
-    scrollTabTextOn : {fontSize:16, fontFamily:'Pretendard-Bold', letterSpacing:-0.32, color:'#4480f0'},
-    scrollTabTextDisabled : {fontSize:16, fontFamily:'Pretendard-Bold', letterSpacing:-0.32, color:'#ced0d6'},
+    scrollTabOn : {paddingTop:8, paddingBottom:13, marginHorizontal:12, borderBottomWidth:2, borderBottomStyle:'solid', borderBottomColor:tokens.semantic.border.brandDefault},
+    scrollTabText : {fontSize:tokens.typo.body.largeDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallDefault.fontWeight), letterSpacing:-0.32, color:tokens.semantic.text.subtlest},
+    scrollTabTextOn : {fontSize:tokens.typo.body.largeDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight), letterSpacing:-0.32, color:tokens.semantic.text.brandDefault},
+    scrollTabTextDisabled : {fontSize:tokens.typo.body.largeDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight), letterSpacing:-0.32, color:tokens.semantic.text.disabledDefault},
 
     // 첨부파일 경로
     breadcrumbsWrap : {paddingVertical:15,paddingHorizontal:20,rowGap:4,columnGap:4},
-    breadcrumbsText : {fontSize:15, fontFamily:'Pretendard-Medium', letterSpacing:-0.23, color:'#5d6677'},
-    breadcrumbsTextBold : {fontSize:15, fontFamily:'Pretendard-Bold', letterSpacing:-0.23, color:'#5d6677'},
+    breadcrumbsText : {fontSize:tokens.typo.body.mediumDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight), letterSpacing:-0.23, color:tokens.semantic.text.subtle},
+    breadcrumbsTextBold : {fontSize:tokens.typo.body.mediumDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight), letterSpacing:-0.23, color:tokens.semantic.text.subtle},
 
     // 카운트가 있는 아이콘
     icoBtn : { position:'relative' },
     icoBtnCnt : { position:'absolute', top:-5, left:'50%', minWidth:12, height:12, borderRadius:12, backgroundColor:'#f56363' },
     icoBtnCntSmall : { position:'absolute', minWidth:12, height:12, borderRadius:12, backgroundColor:'#f56363' },
-    icoBtnCntNum : { fontSize:9, letterSpacing:-0.14, color:'#ffffff', textAlign:'center',lineHeight:12 },
+    icoBtnCntNum : { fontSize:tokens.typo.caption.smallStrong.fontSize, letterSpacing:-0.14, color:tokens.semantic.text.inverse, textAlign:'center',lineHeight:12 },
 
     // 첨부파일 미리보기
     filePreviewBg : {position:'relative',paddingTop:24,paddingHorizontal:24,backgroundColor:'rgba(0,0,0,0.4)',},
-    filePreviewContents : {width:'100%',marginBottom:14,backgroundColor:'#ffffff'},
+    filePreviewContents : {width:'100%',marginBottom:14,backgroundColor:tokens.semantic.bg.inverse},
     filePreviewNumBox : {position:'absolute',left:'50%',bottom:16,marginLeft:-25,width:100,height:24,borderRadius:24,backgroundColor:'rgba(36,40,51,0.8)',},
-    filePreviewNumTxt : {fontSize:12,letterSpacing:-0.18,color:'#ffffff'},
-    fileFootBtn : { paddingTop:16,paddingBottom:24,paddingHorizontal:24, columnGap:8, backgroundColor: '#ffffff', borderTopWidth:1, borderStyle:'solid', borderColor:'#f2f2f2',shadowColor: "#000000",shadowOffset: {width: 0,height: -2},shadowOpacity: 0.07,elevation: 12 },
+    filePreviewNumTxt : {fontSize:tokens.typo.caption.largeDefault.fontSize,letterSpacing:-0.18,color:tokens.semantic.text.inverse},
+    fileFootBtn : { paddingTop:16,paddingBottom:24,paddingHorizontal:24, columnGap:8, backgroundColor: tokens.semantic.bg.inverse, borderTopWidth:1, borderStyle:'solid', borderColor:'#f2f2f2',shadowColor: "#000000",shadowOffset: {width: 0,height: -2},shadowOpacity: 0.07,elevation: 12 },
 
     // 캘린더
     calendarWrap : {position:'relative'},
     calenderFn : {marginTop:22},
-    calendarDate : {fontSize:17,color:'#222222'},
+    calendarDate : {fontSize:tokens.typo.title.smallStronger.fontSize,color:'#222222'},
     calendarCon : {marginTop:14},
-    calendarHText : {height:24,lineHeight:24,fontSize:12,color:'#7e8996',textAlign:'center'},
+    calendarHText : {height:24,lineHeight:tokens.typo.body.largeDefault.lineHeight,fontSize:tokens.typo.caption.largeDefault.fontSize,color:tokens.semantic.text.subtlest,textAlign:'center'},
     calendarTextBox : {position:'relative',height:48},
-    calendarDText : {height:34,lineHeight:34,fontSize:16,color:'#1d2129',textAlign:'center'},
-    calendarDTextDisabled : {height:34,lineHeight:34,fontSize:16,color:'#1d2129',textAlign:'center',opacity:0.3},
-    calendarToday : {width:34,height:34,borderRadius:34,backgroundColor:'#4480f0'},
-    calendarSunday : {fontSize:16,color:'#e65364',textAlign:'center'},
-    calendarSundayDisabled : {fontSize:16,color:'#e65364',textAlign:'center',opacity:0.3},
-    calendarSatday : {fontSize:16,color:'#4480f0',textAlign:'center'},
-    calendarSatdayDisabled : {fontSize:16,color:'#4480f0',textAlign:'center',opacity:0.3},
+    calendarDText : {height:34,lineHeight:34,fontSize:tokens.typo.body.largeDefault.fontSize,color:tokens.semantic.text.strong,textAlign:'center'},
+    calendarDTextDisabled : {height:34,lineHeight:34,fontSize:tokens.typo.body.largeDefault.fontSize,color:tokens.semantic.text.strong,textAlign:'center',opacity:0.3},
+    calendarToday : {width:34,height:34,borderRadius:34,backgroundColor:tokens.semantic.bg.brandDefault},
+    calendarSunday : {fontSize:tokens.typo.body.largeDefault.fontSize,color:'#e65364',textAlign:'center'},
+    calendarSundayDisabled : {fontSize:tokens.typo.body.largeDefault.fontSize,color:'#e65364',textAlign:'center',opacity:0.3},
+    calendarSatday : {fontSize:tokens.typo.body.largeDefault.fontSize,color:tokens.semantic.text.brandDefault,textAlign:'center'},
+    calendarSatdayDisabled : {fontSize:tokens.typo.body.largeDefault.fontSize,color:tokens.semantic.text.brandDefault,textAlign:'center',opacity:0.3},
 
     calendarSelectWrap : {columnGap:-1},
     calendarSelect : {borderRadius:40,backgroundColor:'#e4f0f5',height:44,marginVertical:2},
@@ -364,99 +366,99 @@ export const commCon : any = {
     calendarSelectEnd : {borderTopRightRadius:40,borderBottomRightRadius:40,backgroundColor:'#e4f0f5',height:44,marginVertical:2},
     calendarSelectEndPress : {borderTopRightRadius:40,borderBottomRightRadius:40,backgroundColor:'#ebeef2',height:44,marginVertical:2},
     
-    calendarDTextToday : {height:34,lineHeight:34,fontSize:16,color:'#ffffff',textAlign:'center'},
+    calendarDTextToday : {height:34,lineHeight:34,fontSize:tokens.typo.body.largeDefault.fontSize,color:tokens.semantic.text.inverse,textAlign:'center'},
     calendarEventDay : {position:'absolute',top:12,right:'45%',marginRight:-10,width:4,height:4,borderRadius:4,backgroundColor:'#f56363'},
 
     // 라디오버튼
-    radioSelectItemText : {fontSize:15,letterSpacing:-0.23},
-    radioText : {fontSize:14,letterSpacing:-0.21},
-    radioSubText : {fontSize:13, letterSpacing:-0.2, color:'#7e8996'},
+    radioSelectItemText : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.23},
+    radioText : {fontSize:tokens.typo.body.smallDefault.fontSize,letterSpacing:-0.21},
+    radioSubText : {fontSize:tokens.typo.body.xsmallDefault.fontSize, letterSpacing:-0.2, color:tokens.semantic.text.subtlest},
 
     // 체크박스
-    checkText : {fontSize:15, fontFamily:'Pretendard-Medium', letterSpacing:-0.23, color:'#1d2129'},
-    checkTextDisabled : {fontSize:15, fontFamily:'Pretendard-Medium', letterSpacing:-0.23, color:'#b0b5bf'},
+    checkText : {fontSize:tokens.typo.body.mediumDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight), letterSpacing:-0.23, color:tokens.semantic.text.strong},
+    checkTextDisabled : {fontSize:tokens.typo.body.mediumDefault.fontSize, ...getTokenFontStyle(tokens.typo.body.xsmallStrong.fontWeight), letterSpacing:-0.23, color:tokens.semantic.text.disabledStrong},
     
     // 폼
     formBl1: {borderLeftWidth:1, borderStyle:'solid', borderColor:'#e1e3e6'},
     formBt1: {borderTopWidth:1, borderStyle:'solid', borderColor:'#e1e3e6'},
     formBr1: {borderRightWidth:1, borderStyle:'solid', borderColor:'#e1e3e6'},
     formBb1: {borderBottomWidth:1, borderStyle:'solid', borderColor:'#e1e3e6'},
-    formTh: {paddingVertical:12, paddingHorizontial:10, backgroundColor:'#f7f8fa'},
-    formThText: {textAlign:'center', fontSize:13, letterSpacing:-0.2, color:'#353c49'},
-    formTd: {paddingVertical:14, paddingHorizontial:12, backgroundColor:'#ffffff'},
-    formTdText: {textAlign:'center', fontSize:13, letterSpacing:-0.2, color:'#5d6677', lineHeight:20},
+    formTh: {paddingVertical:12, paddingHorizontial:10, backgroundColor:tokens.semantic.bg.neutralSubtle},
+    formThText: {textAlign:'center', fontSize:tokens.typo.body.xsmallDefault.fontSize, letterSpacing:-0.2, color:tokens.semantic.text.default},
+    formTd: {paddingVertical:14, paddingHorizontial:12, backgroundColor:tokens.semantic.bg.inverse},
+    formTdText: {textAlign:'center', fontSize:tokens.typo.body.xsmallDefault.fontSize, letterSpacing:-0.2, color:tokens.semantic.text.subtle, lineHeight:tokens.typo.body.smallDefault.lineHeight},
 
     // **************************************************
     // 버튼
     // **************************************************
     //Large (56)
-    btn_Large : {fontSize:15, borderRadius:12, letterSpacing: -0.23, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', minHeight:56, lineHeight:56, paddingHorizontal:24}, 
+    btn_Large : {fontSize:tokens.typo.body.mediumDefault.fontSize, borderRadius:12, letterSpacing: -0.23, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', minHeight:56, lineHeight:56, paddingHorizontal:24}, 
         // 파랑버튼
-        blueBtn_L_E : {fontSize:15,color: '#ffffff', backgroundColor:'#4480f0', textAlign: 'center'},
-        blueBtn_L_D : {fontSize:15,color: 'rgba(255,255,255, 0.74)', backgroundColor:'#c3d6fa', textAlign: 'center'},
-        blueBtn_L_P : {fontSize:15,color: '#ffffff', backgroundColor:'#386bc9', textAlign: 'center'},
+        blueBtn_L_E : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandDefault, textAlign: 'center'},
+        blueBtn_L_D : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: 'rgba(255,255,255, 0.74)', backgroundColor:tokens.semantic.bg.brandSubtlest, textAlign: 'center'},
+        blueBtn_L_P : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandStrong, textAlign: 'center'},
         // 회색버튼
-        grayBtn_L_E : {fontSize:15,color: '#353c49', backgroundColor:'#f0f2f4', textAlign: 'center'},
-        grayBtn_L_D : {fontSize:15,color: 'rgba(53,60,73, 0.28)', backgroundColor:'#f7f8fa', textAlign: 'center'},
-        grayBtn_L_P : {fontSize:15,color: '#353c49', backgroundColor:'#e1e3e6', textAlign: 'center'},
+        grayBtn_L_E : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralDefault, textAlign: 'center'},
+        grayBtn_L_D : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: 'rgba(53,60,73, 0.28)', backgroundColor:tokens.semantic.bg.neutralSubtle, textAlign: 'center'},
+        grayBtn_L_P : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralStrong, textAlign: 'center'},
         // 흰색버튼
-        whiteBtn_L_E : {fontSize:15,color: '#353c49', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#ced0d6', textAlign: 'center',},
-        whiteBtn_L_D : {fontSize:15,color: 'rgba(53,60,73, 0.28)', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#f0f2f4', textAlign: 'center'},
-        whiteBtn_L_P : {fontSize:15,color: '#353c49', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', textAlign: 'center'},
+        whiteBtn_L_E : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralDefault, textAlign: 'center',},
+        whiteBtn_L_D : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: 'rgba(53,60,73, 0.28)', backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralSubtler, textAlign: 'center'},
+        whiteBtn_L_P : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', textAlign: 'center'},
 
     //Medium (40)
-    btn_Medium : {borderRadius:8, fontSize:13,letterSpacing: -0.2, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', height:40, lineHeight:40,paddingHorizontal:24},
+    btn_Medium : {borderRadius:8, fontSize:tokens.typo.body.xsmallDefault.fontSize,letterSpacing: -0.2, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', height:40, lineHeight:40,paddingHorizontal:24},
         // 파랑버튼
-        blueBtn_M_E : {fontSize:13,color: '#ffffff', backgroundColor:'#4480f0', textAlign: 'center'},
-        blueBtn_M_D : {fontSize:13,color: 'rgba(255,255,255, 0.74)', backgroundColor:'#c3d6fa', textAlign: 'center'},
-        blueBtn_M_P : {fontSize:13,color: '#ffffff', backgroundColor:'#386bc9', textAlign: 'center'},
+        blueBtn_M_E : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandDefault, textAlign: 'center'},
+        blueBtn_M_D : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: 'rgba(255,255,255, 0.74)', backgroundColor:tokens.semantic.bg.brandSubtlest, textAlign: 'center'},
+        blueBtn_M_P : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandStrong, textAlign: 'center'},
         // 회색버튼
-        grayBtn_M_E : {fontSize:13,color: '#353c49', backgroundColor:'#f0f2f4', textAlign: 'center'},
-        grayBtn_M_D : {fontSize:13,color: 'rgba(53,60,73, 0.28)', backgroundColor:'#f7f8fa', textAlign: 'center'},
-        grayBtn_M_P : {fontSize:13,color: '#353c49', backgroundColor:'#e1e3e6', textAlign: 'center'},
+        grayBtn_M_E : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralDefault, textAlign: 'center'},
+        grayBtn_M_D : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: 'rgba(53,60,73, 0.28)', backgroundColor:tokens.semantic.bg.neutralSubtle, textAlign: 'center'},
+        grayBtn_M_P : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralStrong, textAlign: 'center'},
         // 흰색버튼
-        whiteBtn_M_E : {fontSize:13,color: '#353c49', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#ced0d6', textAlign: 'center'},
-        whiteBtn_M_D : {fontSize:13,color: 'rgba(53,60,73, 0.28)', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#f0f2f4', textAlign: 'center'},
-        whiteBtn_M_P : {fontSize:13,color: '#353c49', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', textAlign: 'center'},
+        whiteBtn_M_E : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralDefault, textAlign: 'center'},
+        whiteBtn_M_D : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: 'rgba(53,60,73, 0.28)', backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralSubtler, textAlign: 'center'},
+        whiteBtn_M_P : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', textAlign: 'center'},
     
     //Small (32)
-    btn_Small : {borderRadius:6, fontSize:13,letterSpacing: -0.2, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', height:32, lineHeight:32,paddingHorizontal:16,},
+    btn_Small : {borderRadius:6, fontSize:tokens.typo.body.xsmallDefault.fontSize,letterSpacing: -0.2, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', height:32, lineHeight:tokens.typo.title.largeStronger.lineHeight,paddingHorizontal:16,},
         // 파랑버튼 
-        blueBtn_S_E : {fontSize:13,color: '#ffffff', backgroundColor:'#4480f0', textAlign: 'center'},
-        blueBtn_S_D : {fontSize:13,color: 'rgba(255,255,255, 0.74)', backgroundColor:'#c3d6fa', textAlign: 'center'},
-        blueBtn_S_P : {fontSize:13,color: '#ffffff', backgroundColor:'#386bc9', textAlign: 'center'},
+        blueBtn_S_E : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandDefault, textAlign: 'center'},
+        blueBtn_S_D : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: 'rgba(255,255,255, 0.74)', backgroundColor:tokens.semantic.bg.brandSubtlest, textAlign: 'center'},
+        blueBtn_S_P : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandStrong, textAlign: 'center'},
         // 회색버튼
-        grayBtn_S_E : {fontSize:13,color: '#353c49', backgroundColor:'#f0f2f4', textAlign: 'center'},
-        grayBtn_S_D : {fontSize:13,color: 'rgba(#53,60,73, 0.28)', backgroundColor:'#f7f8fa', textAlign: 'center'},
-        grayBtn_S_P : {fontSize:13,color: '#353c49', backgroundColor:'#e1e3e6', textAlign: 'center'},
+        grayBtn_S_E : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralDefault, textAlign: 'center'},
+        grayBtn_S_D : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: 'rgba(#53,60,73, 0.28)', backgroundColor:tokens.semantic.bg.neutralSubtle, textAlign: 'center'},
+        grayBtn_S_P : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralStrong, textAlign: 'center'},
         // 흰색버튼
-        whiteBtn_S_E : {fontSize:13,color: '#353c49', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#ced0d6', textAlign: 'center'},
-        whiteBtn_S_D : {fontSize:13,color: 'rgba(53,60,73, 0.28)', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#f0f2f4', textAlign: 'center'},
-        whiteBtn_S_P : {fontSize:13,color: '#353c49', backgroundColor:'#fff', borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', textAlign: 'center'},
+        whiteBtn_S_E : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralDefault, textAlign: 'center'},
+        whiteBtn_S_D : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: 'rgba(53,60,73, 0.28)', backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralSubtler, textAlign: 'center'},
+        whiteBtn_S_P : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.inverse, borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', textAlign: 'center'},
 
     // Extra Small
     // 기본
-    btn_etc: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, borderWidth:1, borderStyle:'solid', borderColor:'#d8dbe2', backgroundColor:'#ffffff'},
-    btn_ect_P: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', backgroundColor:'#ffffff'},
-    btn_etcText: {letterSpacing:-0.18, color:'#353c49'}, // enabled, pressed text
-    btn_ect_D: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, borderWidth:1, borderStyle:'solid', borderColor:'#f0f2f4', backgroundColor:'#ffffff'},
+    btn_etc: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralSubtle, backgroundColor:tokens.semantic.bg.inverse},
+    btn_ect_P: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, borderWidth:1, borderStyle:'solid', borderColor:'#a9abb0', backgroundColor:tokens.semantic.bg.inverse},
+    btn_etcText: {letterSpacing:-0.18, color:tokens.semantic.text.default}, // enabled, pressed text
+    btn_ect_D: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.neutralSubtler, backgroundColor:tokens.semantic.bg.inverse},
     btn_etcText_D: {letterSpacing:-0.18, color:'rgba(53, 60, 73, 0.28)'},
     // 블루
-    btn_etc_blue: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:'#4480f0'},
-    btn_etc_blue_P: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:'#386bc9'},
-    btn_etcText_blue: {letterSpacing:-0.18, color:'#ffffff'}, // enabled, pressed text
-    btn_etc_blue_D: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:'#c3d6fa'},
+    btn_etc_blue: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:tokens.semantic.bg.brandDefault},
+    btn_etc_blue_P: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:tokens.semantic.bg.brandStrong},
+    btn_etcText_blue: {letterSpacing:-0.18, color:tokens.semantic.text.inverse}, // enabled, pressed text
+    btn_etc_blue_D: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:tokens.semantic.bg.brandSubtlest},
     btn_etcText_blue_D: {letterSpacing:-0.18, color:'rgba(255, 255, 255, 0.74)'},
     // 회색 (텍스트는 기본 버튼 텍스트와 똑같음)
-    btn_etc_gray: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:'#f0f2f4'},
-    btn_etc_gray_P: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:'#e1e3e6'},
-    btn_etc_gray_D: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:'#f7f8fa'},
+    btn_etc_gray: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:tokens.semantic.bg.neutralDefault},
+    btn_etc_gray_P: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:tokens.semantic.bg.neutralStrong},
+    btn_etc_gray_D: {paddingVertical:4, paddingHorizontal:8, borderRadius:4, backgroundColor:tokens.semantic.bg.neutralSubtle},
 
     // 여부 버튼
-    btn_wt: {flex:1, justifyContent:'center', alignItems:'center', minHeight:40, borderRadius:8, borderWidth:1, borderStyle:'solid', borderColor:'#f7f8fa', backgroundColor:'#f7f8fa'},
-    btn_wt_on: {flex:1, justifyContent:'center', alignItems:'center', minHeight:40, borderRadius:8, borderWidth:1, borderStyle:'solid', borderColor:'#4480f0', backgroundColor:'#f5f8ff'},
-    btn_wtText: {fontSize:13, letterSpacing:-0.2, color:'#7e8996'},
-    btn_wtText_on: {fontSize:13, letterSpacing:-0.2, color:'#4480f0'},
+    btn_wt: {flex:1, justifyContent:'center', alignItems:'center', minHeight:40, borderRadius:8, borderWidth:1, borderStyle:'solid', borderColor:'#f7f8fa', backgroundColor:tokens.semantic.bg.neutralSubtle},
+    btn_wt_on: {flex:1, justifyContent:'center', alignItems:'center', minHeight:40, borderRadius:8, borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.brandDefault, backgroundColor:'#f5f8ff'},
+    btn_wtText: {fontSize:tokens.typo.body.xsmallDefault.fontSize, letterSpacing:-0.2, color:tokens.semantic.text.subtlest},
+    btn_wtText_on: {fontSize:tokens.typo.body.xsmallDefault.fontSize, letterSpacing:-0.2, color:tokens.semantic.text.brandDefault},
 }
 
 // snackbar
@@ -464,13 +466,13 @@ export const snackBar : any = {
     snackBarWrap : {position:'absolute',bottom:24,width:'100%',paddingHorizontal:16,zIndex:999},
     snackBarCon : {borderRadius:12,paddingVertical:12,paddingLeft:16,paddingRight:50,backgroundColor:'rgba(36,40,51, 0.9)',overflow:'hidden'},
     snackBarIco : {marginRight:12},
-    snackBarTxt : {fontSize:14,letterSpacing:-0.21,color:'#ffffff'},
+    snackBarTxt : {fontSize:tokens.typo.body.smallDefault.fontSize,letterSpacing:-0.21,color:tokens.semantic.text.inverse},
 }
 
 // bottom sheet
 export const botSheet : any = {
     bsWrap : {
-        position:'absolute',bottom:0,width:'100%',minHeight:242,paddingBottom:24,borderTopLeftRadius:24,borderTopRightRadius:24,backgroundColor:'#ffffff',
+        position:'absolute',bottom:0,width:'100%',minHeight:242,paddingBottom:24,borderTopLeftRadius:24,borderTopRightRadius:24,backgroundColor:tokens.semantic.bg.inverse,
         // box shadow
         shadowColor: "#000000",shadowOffset: {width: 0,height: -2},shadowOpacity: 0.07,elevation: 12
     },
@@ -478,44 +480,44 @@ export const botSheet : any = {
     bsCon24 : {marginTop:8,marginHorizontal:24},
     bsCon28 : {marginTop:8,marginHorizontal:28},
 
-    hLine : {marginVertical:12,width:'100%',height:1,backgroundColor:'#f0f2f4'},
+    hLine : {marginVertical:12,width:'100%',height:1,backgroundColor:tokens.semantic.bg.neutralDefault},
     
-    bsTitle : {height:62,marginHorizontal:24,paddingTop:8, borderBottomWidth:1, borderStyle:'solid', borderBottomColor:'#f0f2f4'},
-    bsTitleTxt : {fontSize:17,letterSpacing:-0.26,color:'#353c49'},
+    bsTitle : {height:62,marginHorizontal:24,paddingTop:8, borderBottomWidth:1, borderStyle:'solid', borderBottomColor:tokens.semantic.border.neutralSubtler},
+    bsTitleTxt : {fontSize:tokens.typo.title.smallStronger.fontSize,letterSpacing:-0.26,color:tokens.semantic.text.default},
     
     selectList : {paddingTop:8},
-    selectItem : {height:56,paddingHorizontal:24,backgroundColor:'#ffffff'},
-    selectItemOn : {height:56,paddingHorizontal:24,backgroundColor:'#f7f8fa'},
-    selectItemPressed : {height:56,paddingHorizontal:24,backgroundColor:'#f0f2f4'},
-    selectItemText : {fontSize:15,letterSpacing:-0.22,color:'#1d2129'},
-    selectItemText02 : {fontSize:14,letterSpacing:-0.21,color:'#1d2129'},
-    selectItemText03 : {fontSize:12,letterSpacing:-0.18,color:'#7e8996'},
-    selectItemText04 : {fontSize:14,letterSpacing:-0.21,color:'#7e8996'},
+    selectItem : {height:56,paddingHorizontal:24,backgroundColor:tokens.semantic.bg.inverse},
+    selectItemOn : {height:56,paddingHorizontal:24,backgroundColor:tokens.semantic.bg.neutralSubtle},
+    selectItemPressed : {height:56,paddingHorizontal:24,backgroundColor:tokens.semantic.bg.neutralDefault},
+    selectItemText : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.strong},
+    selectItemText02 : {fontSize:tokens.typo.body.smallDefault.fontSize,letterSpacing:-0.21,color:tokens.semantic.text.strong},
+    selectItemText03 : {fontSize:tokens.typo.caption.largeDefault.fontSize,letterSpacing:-0.18,color:tokens.semantic.text.subtlest},
+    selectItemText04 : {fontSize:tokens.typo.body.smallDefault.fontSize,letterSpacing:-0.21,color:tokens.semantic.text.subtlest},
 
     selectChips : {paddingTop:8,marginHorizontal:24},
     selectChipsTitle : {height:40},
-    selectChipsTitleTxt : {fontSize:15,letterSpacing:-0.22,color:'#7e8996'},
+    selectChipsTitleTxt : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.subtlest},
     selectChipsBox : {paddingTop:8,rowGap:12,columnGap:8},
-    selectChipItem : {height:36,paddingHorizontal:16,borderRadius:18,backgroundColor:'#f7f8fa'},
-    selectChipItem_p : {height:36,paddingHorizontal:16,borderRadius:18,backgroundColor:'#f0f2f4'},
-    selectChipItemOn : {height:36,paddingHorizontal:15,borderRadius:18,borderWidth:1, borderStyle:'solid', borderColor:'#4480f0',backgroundColor:'#f4f8ff'},
-    selectChipItemOn_p : {height:36,paddingHorizontal:15,borderRadius:18,borderWidth:1, borderStyle:'solid', borderColor:'#4480f0',backgroundColor:'#e0eaff'},
-    selectChipItemText : {fontSize:15,letterSpacing:-0.22,color:'#1d2129'},
-    selectChipItemTextOn : {fontSize:15,letterSpacing:-0.22,color:'#4480f0'},
+    selectChipItem : {height:36,paddingHorizontal:16,borderRadius:18,backgroundColor:tokens.semantic.bg.neutralSubtle},
+    selectChipItem_p : {height:36,paddingHorizontal:16,borderRadius:18,backgroundColor:tokens.semantic.bg.neutralDefault},
+    selectChipItemOn : {height:36,paddingHorizontal:15,borderRadius:18,borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.brandDefault,backgroundColor:tokens.semantic.bg.selected},
+    selectChipItemOn_p : {height:36,paddingHorizontal:15,borderRadius:18,borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.brandDefault,backgroundColor:'#e0eaff'},
+    selectChipItemText : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.strong},
+    selectChipItemTextOn : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.brandDefault},
 
     periodItem : {paddingVertical:6},
-    periodTitle : {fontSize:15,letterSpacing:-0.22,color:'#7e8996'},
+    periodTitle : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.subtlest},
    
-    periodBox : {paddingVertical:9,paddingHorizontal:12,borderRadius:8,backgroundColor:'#f7f8fa'},
-    periodBoxPressed : {paddingVertical:9,paddingHorizontal:12,borderRadius:8,backgroundColor:'#f0f2f4'},
-    periodBoxOn : {paddingVertical:9,paddingHorizontal:12,borderRadius:8,borderWidth:1, borderStyle:'solid', borderColor:'#4480f0',backgroundColor:'#f4f8ff'},
-    periodText : {fontSize:15,letterSpacing:-0.22,color:'#1d2129'},
-    periodTextOn : {fontSize:15,letterSpacing:-0.22,color:'#4480f0'},
+    periodBox : {paddingVertical:9,paddingHorizontal:12,borderRadius:8,backgroundColor:tokens.semantic.bg.neutralSubtle},
+    periodBoxPressed : {paddingVertical:9,paddingHorizontal:12,borderRadius:8,backgroundColor:tokens.semantic.bg.neutralDefault},
+    periodBoxOn : {paddingVertical:9,paddingHorizontal:12,borderRadius:8,borderWidth:1, borderStyle:'solid', borderColor:tokens.semantic.border.brandDefault,backgroundColor:tokens.semantic.bg.selected},
+    periodText : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.strong},
+    periodTextOn : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.brandDefault},
 
     pwTitleBox : {marginTop:8,height:56},
-    pwTitle : {fontSize:19,color:'#353c49',letterSpacing:-0.28},
+    pwTitle : {fontSize:tokens.typo.title.mediumStrong.fontSize,color:tokens.semantic.text.default,letterSpacing:-0.28},
     pwTxtBox : {marginBottom:24},
-    pwTxt : {fontSize:13,color:'#7e8996',letterSpacing:-0.2,textAlign:'center'},
+    pwTxt : {fontSize:tokens.typo.body.xsmallDefault.fontSize,color:tokens.semantic.text.subtlest,letterSpacing:-0.2,textAlign:'center'},
     pwBtn : {paddingTop:16, paddingBottom:34, paddingHorizontal:24},
 
     // 체크 이미지 영역
@@ -526,47 +528,47 @@ export const botSheet : any = {
 
     // 이용약관 체크
     termsCheck : {justifyContent:'center', alignItems:'flex-start', },
-    termsCheckText : {textDecorationLine: "none", fontSize:15, letterSpacing:-0.23,color:'#1d2129', marginLeft:-9,},
+    termsCheckText : {textDecorationLine: "none", fontSize:tokens.typo.body.mediumDefault.fontSize, letterSpacing:-0.23,color:tokens.semantic.text.strong, marginLeft:-9,},
 
     // 도움말
-    infoBox : {borderRadius:12, backgroundColor: '#f7f8fa', padding:20, marginTop:8, marginHorizontal:24},
-    infoBoxTitle: {fontSize:13,color:'#353c49',letterSpacing:-0.2},
-    infoBoxText: {fontSize:12,color:'#5d6677',letterSpacing:-0.18,marginTop:8, lineHeight:17},
+    infoBox : {borderRadius:12, backgroundColor: tokens.semantic.bg.neutralSubtle, padding:20, marginTop:8, marginHorizontal:24},
+    infoBoxTitle: {fontSize:tokens.typo.body.xsmallDefault.fontSize,color:tokens.semantic.text.default,letterSpacing:-0.2},
+    infoBoxText: {fontSize:tokens.typo.caption.largeDefault.fontSize,color:tokens.semantic.text.subtle,letterSpacing:-0.18,marginTop:8, lineHeight:17},
     infoBoxDot : {width:2,height:2,borderRadius:2,backgroundColor:'#6b7991',marginTop:15, marginRight:4},
 }
 
 // popup
 export const popup : any = {
     popupWrap : {
-        position:'absolute',top:'50%',left:'50%',width:312,borderRadius:12,backgroundColor:'#ffffff',overflow:'hidden',
+        position:'absolute',top:'50%',left:'50%',width:312,borderRadius:12,backgroundColor:tokens.semantic.bg.inverse,overflow:'hidden',
         // box shadow
         shadowColor: "#000000",shadowOffset: {width: 0,height: -2},shadowOpacity: 0.07,elevation: 12
     },
     popupCon : {paddingHorizontal:16, paddingBottom:32},
     popupCon24 : {paddingHorizontal:24, paddingBottom:32},
     popupIcon : {marginTop:32,marginBottom:16},
-    mainText : {marginBottom:8,lineHeight:22,fontSize:15,letterSpacing:-0.22,color:'#353c49',textAlign:'center'},
-    subText : {fontSize:13,letterSpacing:-0.2,color:'#7e8996',textAlign:'center',lineHeight:18},
-    subTextBold : {fontSize:13,letterSpacing:-0.2,color:'#7e8996',textAlign:'center',lineHeight:18,fontWeight:'bold'},
-    subTextBlue : {fontSize:13,letterSpacing:-0.2,color:'#4480f0',textAlign:'center',lineHeight:18},
-    subBigTxt : {fontSize:15,letterSpacing:-0.23,textAlign:'center',color:'#353c49'},
+    mainText : {marginBottom:8,lineHeight:tokens.typo.body.mediumDefault.lineHeight,fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.22,color:tokens.semantic.text.default,textAlign:'center'},
+    subText : {fontSize:tokens.typo.body.xsmallDefault.fontSize,letterSpacing:-0.2,color:tokens.semantic.text.subtlest,textAlign:'center',lineHeight:tokens.typo.body.xsmallDefault.lineHeight},
+    subTextBold : {fontSize:tokens.typo.body.xsmallDefault.fontSize,letterSpacing:-0.2,color:tokens.semantic.text.subtlest,textAlign:'center',lineHeight:tokens.typo.body.xsmallDefault.lineHeight,fontWeight:'bold'},
+    subTextBlue : {fontSize:tokens.typo.body.xsmallDefault.fontSize,letterSpacing:-0.2,color:tokens.semantic.text.brandDefault,textAlign:'center',lineHeight:tokens.typo.body.xsmallDefault.lineHeight},
+    subBigTxt : {fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.23,textAlign:'center',color:tokens.semantic.text.default},
     
-    grayBox : {borderRadius: 12, backgroundColor:'#f7f8fa', marginTop:16,alignItems:'center',paddingHorizontal:20, paddingVertical:17},   // popup.grayBox
-    grayBoxScroll : {borderRadius: 12, backgroundColor:'#f7f8fa', marginTop:16, paddingVertical:20},   // popup.grayBox
-    grayBoxTitText : {height:20, lineHeight:18, marginRight:8, letterSpacing: -0.18, color:'#5d6677'},
-    grayBoxText : {lineHeight:18, marginRight:8, letterSpacing: -0.18},
-    grayBoxTextDate : {fontSize:13, height:20, lineHeight:18, marginRight:8, letterSpacing: -0.18},
+    grayBox : {borderRadius: 12, backgroundColor:tokens.semantic.bg.neutralSubtle, marginTop:16,alignItems:'center',paddingHorizontal:20, paddingVertical:17},   // popup.grayBox
+    grayBoxScroll : {borderRadius: 12, backgroundColor:tokens.semantic.bg.neutralSubtle, marginTop:16, paddingVertical:20},   // popup.grayBox
+    grayBoxTitText : {height:20, lineHeight:tokens.typo.body.xsmallDefault.lineHeight, marginRight:8, letterSpacing: -0.18, color:tokens.semantic.text.subtle},
+    grayBoxText : {lineHeight:tokens.typo.body.xsmallDefault.lineHeight, marginRight:8, letterSpacing: -0.18},
+    grayBoxTextDate : {fontSize:tokens.typo.body.xsmallDefault.fontSize, height:20, lineHeight:tokens.typo.body.xsmallDefault.lineHeight, marginRight:8, letterSpacing: -0.18},
 
     //하단 버튼
-    btn_Large : {fontSize:15, letterSpacing: -0.23, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', minHeight:56, lineHeight:56, paddingHorizontal:24}, 
+    btn_Large : {fontSize:tokens.typo.body.mediumDefault.fontSize, letterSpacing: -0.23, textAlign: 'center', textAlignVertical:'center', justifyContent: 'center', alignItems: 'center', minHeight:56, lineHeight:56, paddingHorizontal:24}, 
         // 파랑버튼
-        blueBtn_L_E : {fontSize:15,color: '#ffffff', backgroundColor:'#4480f0', textAlign: 'center'},
-        blueBtn_L_D : {fontSize:15,color: 'rgba(255,255,255, 0.74)', backgroundColor:'#c3d6fa', textAlign: 'center'},
-        blueBtn_L_P : {fontSize:15,color: '#ffffff', backgroundColor:'#386bc9', textAlign: 'center'},
+        blueBtn_L_E : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandDefault, textAlign: 'center'},
+        blueBtn_L_D : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: 'rgba(255,255,255, 0.74)', backgroundColor:tokens.semantic.bg.brandSubtlest, textAlign: 'center'},
+        blueBtn_L_P : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.inverse, backgroundColor:tokens.semantic.bg.brandStrong, textAlign: 'center'},
         // 회색버튼
-        grayBtn_L_E : {fontSize:15,color: '#353c49', backgroundColor:'#f0f2f4', textAlign: 'center'},
-        grayBtn_L_D : {fontSize:15,color: 'rgba(53,60,73, 0.28)', backgroundColor:'#f7f8fa', textAlign: 'center'},
-        grayBtn_L_P : {fontSize:15,color: '#353c49', backgroundColor:'#e1e3e6', textAlign: 'center'},
+        grayBtn_L_E : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralDefault, textAlign: 'center'},
+        grayBtn_L_D : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: 'rgba(53,60,73, 0.28)', backgroundColor:tokens.semantic.bg.neutralSubtle, textAlign: 'center'},
+        grayBtn_L_P : {fontSize:tokens.typo.body.mediumDefault.fontSize,color: tokens.semantic.text.default, backgroundColor:tokens.semantic.bg.neutralStrong, textAlign: 'center'},
 }
 
 // FAB
@@ -575,6 +577,6 @@ export const fab : any = {
     fabWrapType2 : {paddingBottom:24,paddingHorizontal:16}, // empty 화면일 때 wrap
     fabBox1 : {justifyContent:'center',width:56,height:56,borderRadius:28,shadowColor: "#000000",shadowOffset: {width: 0,height: 2},shadowOpacity: 0.23,shadowRadius: 2.62,elevation: 4}, // 이미지 버튼
     fabBox2 : {width:'100%',display:'flex', justifyContent:'center',alignItems:'center',height:56,borderRadius:999,shadowColor: "#000000",shadowOffset: {width: 0,height: 2},shadowOpacity: 0.23,shadowRadius: 2.62,elevation: 4}, // 이미지+텍스트 버튼
-    fabText : {paddingLeft:6,fontFamily: 'Pretendard-Bold',fontSize:15,letterSpacing:-0.23,color:'#ffffff'},
-    fabTextPressed : {paddingLeft:6,fontFamily: 'Pretendard-Bold',fontSize:15,letterSpacing:-0.23,color:'rgba(255, 255, 255, 0.6)'},
+    fabText : {paddingLeft:6,...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.23,color:tokens.semantic.text.inverse},
+    fabTextPressed : {paddingLeft:6,...getTokenFontStyle(tokens.typo.body.xsmallStronger.fontWeight),fontSize:tokens.typo.body.mediumDefault.fontSize,letterSpacing:-0.23,color:'rgba(255, 255, 255, 0.6)'},
 }
